@@ -25,6 +25,9 @@ h1 {
     color: black;
     margin: 0 8px;
 }
+h3::selection {
+    background-color: yellow;
+}
 .navbar {
     margin: 32px;
 }
