@@ -16,6 +16,7 @@ h1 {
     font-size: 80px;
     letter-spacing: -1.5px;
     font-weight: 400;   /* cascade comes into play here */
+    margin: 0;
 }
 
 h2 {
@@ -86,4 +87,62 @@ span {
     display: block; /* pushes text below the main text */
     font-weight: bold;
     margin-left: 20px;
+}
+
+code {
+    color: #e95400;
+    font-weight: bold;
+}
+
+.hero {
+    background-color: brown;
+    color: white;
+    height: 100vh;
+    text-align: center;
+
+    /* Don't worry about this code yet */
+    display: flex; /* changes the inside of the container */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1, .hero p {
+    width: 75%;
+    max-width: 900px;
+    margin: 16px 0;
+}
+
+.hero hr {
+    width: 50%;
+    margin: 32px 0;
+}
+
+footer {
+    background-color: brown;
+    
+}
+
+footer ul {
+    list-style: none;
+    margin: 0 auto;
+    width: 100%;  /* important for centering */
+    max-width: 900px; /* important for centering */
+    text-align: center; /* important for centering */
+    padding: 28px 0;
+}
+
+footer ul li {
+    display: inline;
+    padding: 0 16px; /* important for centering */
+}
+
+footer ul li a { /* can also use a class like 'navlink' IRL */
+    text-decoration: none;
+    color: white;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+    color: white;
 }
