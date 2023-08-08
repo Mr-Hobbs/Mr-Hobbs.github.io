@@ -30,6 +30,22 @@
         li {
             margin: 5px 0;
         }
+        /* Define the initial style for the h1 element */
+        #pulsing-heading {
+            font-size: 24px;
+            transition: font-size 0.3s ease-in-out;
+        }
+        /* Define the pulsing animation */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Apply the animation to the element when it has the "pulsing" class */
+        .pulsing {
+            animation: pulse 1.5s infinite;
+        }
     </style>
 
 </head>
@@ -38,7 +54,8 @@
 
 
  <div id="box">   
-    <h1>Hello Everyone! </h1>
+    <h1 id="pulsing-heading">Hello Everyone! </h1>
+    <script src="script.js"></script>
     <p>My name is Spencer. I am a New England based web developer.<br>
     You've found my project list. It is updated irregularly. Peruse at your leasure.<br>
     <!--Donate a milkshake via Venmo @Spencer-H-2--></p>
