@@ -9,11 +9,16 @@
             top: 1.5rem;
             background-color: whitesmoke;
             width: 45%;
+            height: min-content;
             max-width: 610px;
+            min-width: 609px;
             padding: 25px;
             margin: 50px auto;
             border-radius: 25px;
-            border: solid 3px black;
+            /*border: solid 3px black;*/
+            
+            display: block;
+            
         }
         h1 {
             text-align: center;
@@ -26,20 +31,52 @@
         }
         ul {
           list-style-type: none;
-          padding: 10px 0;
-          margin: 0 auto;
-          
+          padding: 1rem 0;
+          margin: auto;
+          width: 95%;
+          display: relative;
+          position: relative;
+          justify-content: center;
+          /*right: -1rem;*/
         }
 
         ul li {
           text-align: center;
-          margin: 0;
+          display: inline-block;
+          width: auto;
+          
+        }
+        
+        .link {
+          /*border: 1px solid black;*/
+          max-width: 75%;
+          text-decoration: none;
+          color: black;
+          display: inline-block;
+          margin: 0.5rem 0.8rem;
+          padding: 16px 24px;
+          border-radius: 10px;
+          background-color: rgb(157, 255, 157);
+          transition: background-color 0.75s, color 0.75s, transform 1s ease-in 0.75s;
         }
 
-        a:hover {
-            color:red;
-            text-decoration: underline;
+        .link:hover {
+            color: white;
+            text-decoration: none;
+            background-color: rgb(0, 128, 0);
         }
+    
+        .venmoLink {
+            text-decoration: none;
+            transition: color 0.75s, transform 1s ease-in 0.75s;
+        }
+        .venmoLink:hover {
+            text-decoration: none;
+            color: green;
+        }
+
+        
+
         /* Define the initial style for the h1 element */
         #pulsing-heading {
             font-size: 24px;
@@ -58,7 +95,7 @@
         }
 
         .contact {
-           background-color: rgb(64, 153, 175);
+           background-color: rgb(0, 136, 100)/*rgb(64, 153, 175)*/;
            color: white;
            padding: 24px 24px;
            text-decoration: none;
@@ -101,15 +138,29 @@
  <div id="box">   
     <h1 id="pulsing-heading">Hello Everyone! </h1>
     <script src="script.js"></script>
-    <p>My name is Spencer. I am a New England based web designer.
+    <p>My name is Spencer. I am a New England based web developer.
     You've found my project list. It is updated irregularly. Peruse at your leasure.<br>
-    <!--Donate a milkshake via Venmo @Spencer-H-2--></p>
+    Donate a milkshake via <b><a class="venmoLink" href="https://account.venmo.com/u/Spencer-H-2">Venmo</a></b>.</p>
+
 
      <ul>
-        <li><a href="./ArtistPortfolioProject_Page1.html">Artist Project</a></li>
-        <li><a href="./BlogPostMainPage.html">Typography Blog Post</a></li>
-        <li><a href="./HazelCV.html">CV Example</a></li>
+        <li class="listicle"><a class="link" href="./ArtistPortfolioProject_Page1.html">Artist Project</a></li>
+        <li class="listicle"><a class="link" href="./BlogPostMainPage.html">Typography Blog Post</a></li>
+        <li class="listicle"><a class="link" href="./HazelCV.html">CV Example</a></li>
+        
+        <!--<li class="listicle"><a class="link" href="./ArtistPortfolioProject_Page1.html">Lorem Ipsum dolar sit amet</a></li>
+        <li class="listicle"><a class="link" href="./BlogPostMainPage.html">Typography Blog Post</a></li>
+        <li class="listicle"><a class="link" href="./HazelCV.html">CV Example</a></li>
+        
+        <li class="listicle"><a class="link" href="./ArtistPortfolioProject_Page1.html">Artist Project</a></li>
+        <li class="listicle"><a class="link" href="./BlogPostMainPage.html">Typography Blog Post</a></li>
+        <li class="listicle"><a class="link" href="./HazelCV.html">CV Example</a></li>
+        
+        <li class="listicle"><a class="link" href="./ArtistPortfolioProject_Page1.html">Artist Project</a></li>
+        <li class="listicle"><a class="link" href="./BlogPostMainPage.html">Typography Blog Post</a></li>
+        <li class="listicle"><a class="link" href="./HazelCV.html">CV Example</a></li>-->
     </ul>
+
 <br><hr><br><br><br>
     <p class="ContactSquare"><a class="contact" href="https://www.linkedin.com/in/spencer-hobbs-ms-a7633926/">Contact Me</a></p><br><br>
 </div>
