@@ -10,9 +10,9 @@
             background-color: whitesmoke;
             width: 45%;
             height: min-content;
-            max-width: 610px;
+            max-width: 850px;
             min-width: 609px;
-            padding: 25px;
+            padding: 32px;
             margin: 50px auto;
             border-radius: 25px;
             /*border: solid 3px black;*/
@@ -32,29 +32,31 @@
         ul {
           list-style-type: none;
           padding: 1rem 0;
-          margin: auto;
+          margin: 0 auto;
           width: 95%;
-          display: relative;
           position: relative;
           justify-content: center;
+          align-items: center;
           /*right: -1rem;*/
+          align-items: center;
         }
 
         ul li {
           text-align: center;
-          display: inline-block;
-          width: auto;
-          
+          display: inline;
+                    
         }
         
         .link {
           /*border: 1px solid black;*/
-          max-width: 75%;
+          /*min-width: 25%;
+          max-width: 32%;*/
           text-decoration: none;
           color: black;
           display: inline-block;
-          margin: 0.5rem 0.8rem;
-          padding: 16px 24px;
+          font-size: 1.4rem;
+          margin: 0.5rem 0.5rem;
+          padding: 1rem 1.5rem;
           border-radius: 10px;
           background-color: rgb(157, 255, 157);
           transition: background-color 0.4s, color 0.4s, transform .5s ease-in 0.4s;
@@ -79,7 +81,7 @@
 
         /* Define the initial style for the h1 element */
         #pulsing-heading {
-            font-size: 24px;
+            font-size: 3rem;
             transition: font-size 0.3s ease-in-out;
         }
         /* Define the pulsing animation */
@@ -128,6 +130,10 @@
             transform: translateY(-5px);
         }
 
+        p {
+            font-size: 1.5rem;
+        }
+
     </style>
 
 </head>
@@ -136,7 +142,7 @@
 
 
  <div id="box">   
-    <h1 id="pulsing-heading">Hello Everyone! </h1>
+    <h1 id="pulsing-heading">Welcome! </h1>
     <script src="script.js"></script>
     <p>My name is Spencer. I am a New England based web designer.
     You've found my project list. It is updated irregularly. Peruse at your leasure.<br>
@@ -148,7 +154,7 @@
         <li class="listicle"><a class="link" href="./BlogPostMainPage.html">Typography Blog Post</a></li>
         <li class="listicle"><a class="link" href="./HazelCV.html">CV Example</a></li>
         
-        <!--<li class="listicle"><a class="link" href="./ArtistPortfolioProject_Page1.html">Lorem Ipsum dolar sit amet</a></li>
+        <!--<li class="listicle"><a class="link" href="./ArtistPortfolioProject_Page1.html">Lorem Ipsum dolar sit</a></li>
         <li class="listicle"><a class="link" href="./BlogPostMainPage.html">Typography Blog Post</a></li>
         <li class="listicle"><a class="link" href="./HazelCV.html">CV Example</a></li>
         
