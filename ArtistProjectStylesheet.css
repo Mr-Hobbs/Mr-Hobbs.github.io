@@ -25,9 +25,6 @@ h1 {
     color: black;
     margin: 0 8px;
 }
-h3::selection {
-    background-color: yellow;
-}
 .navbar {
     margin: 32px;
 }
@@ -38,9 +35,11 @@ a.active {
 
 .card {
     width: 49.75%;
+    min-width: 400px;
     display: inline-block;
     box-sizing: border-box;
     padding: 16px;
+    flex: 1 1;
 }
 
 .card img {
@@ -56,10 +55,13 @@ a.active {
 .card img:hover {
     opacity: 0.9;
 }
-
+h3::selection {
+    background-color: yellow;
+}
 
 .wrapper {
     padding: 16px;
+    
 }
 .about h3 {
     font-size: 40px;
