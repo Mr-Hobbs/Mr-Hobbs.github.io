@@ -8,16 +8,16 @@
             position: relative;
             top: 1.5rem;
             background-color: whitesmoke;
-            width: 80%;
+            width: 100%;
             height: min-content;
-            /*max-width: 850px;*/
+            max-width: 1100px;
             min-width: 609px;
             padding: 32px;
-            margin: 50px auto;
+            margin: 0 auto;
             border-radius: 25px;
             /*border: solid 3px black;*/
             
-            display: block;
+            /*display: block;*/
             
         }
         h1 {
@@ -25,10 +25,16 @@
             padding: 0;
         }
         body {
-            background: linear-gradient(to bottom right, #3899ee, #38e2ee);
-            height: 100vh;
+            background-color: #5fb4ff;
+            /*background: linear-gradient(to bottom right, #3899ee, #38e2ee);*/
+            /*height: 100vh;*/
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /*centers items on the main access (vertical access in this case)*/
+            align-items: center; /*centers items on the cross access (horizontal access in this case)*/
         }
+        
         ul {
           list-style-type: none;
           padding: 1rem 0;
@@ -83,6 +89,14 @@
         #pulsing-heading {
             font-size: 3rem;
             transition: font-size 0.3s ease-in-out;
+            color: #174a77;
+            width: 100%;
+            max-width: 900px;
+            /*padding: 50px 0 0 0;*/
+            display: flex;
+            flex-direction: row;
+        justify-content: center; /*centers items on the main access (vertical access in this case)*/
+        align-items: center; /*centers items on the cross access (horizontal access in this case)*/
         }
         /* Define the pulsing animation */
         @keyframes pulse {
@@ -140,9 +154,9 @@
 <body>
 
 
-
+    <h1 id="pulsing-heading">Welcome!</h1>
  <div id="box">   
-    <h1 id="pulsing-heading">Welcome! </h1>
+
     <script src="script.js"></script>
     <p>My name is Spencer. I am a New England based web designer.
     You've found my project list. It is updated irregularly. Peruse at your leasure.<br>
