@@ -1,0 +1,27 @@
+
+body {
+    background-color: rgb(233,223,255);
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*centers items on the main access (vertical access in this case)*/
+    align-items: center; /*centers items on the cross access (horizontal access in this case)*/
+    color: rgb(44,44,44);
+}
+
+h1 {
+    color: rgb(83, 49, 156)
+}
+
+.container {
+    border-radius: 20px;
+    background-color: white;
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*centers items on the main access (vertical access in this case)*/
+    align-items: center; /*centers items on the cross access (horizontal access in this case)*/
+}
