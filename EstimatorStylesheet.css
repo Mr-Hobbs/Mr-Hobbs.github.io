@@ -21,9 +21,11 @@ h1 {
     width: 100%;
     max-width: 900px;
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center; /*centers items on the main access (vertical access in this case)*/
     align-items: center; /*centers items on the cross access (horizontal access in this case)*/
+    padding: 0 64px 64px 64px;
 }
 
 .tabs {
@@ -34,11 +36,13 @@ h1 {
     text-transform: uppercase;
     font-weight: bold;
     color: rgb(200,175,255); 
+    padding: 16px;
+    
     
 }
 
 .tabs p {
-    padding: 16px;
+    padding: 8px;
 }
 
 .tabs p:hover {
@@ -48,4 +52,27 @@ h1 {
 
 .tabs p.active { /* on the tabs div if a paragraph has the class of active then make it this color*/
     color: rgb(83,49,156);
+    position: relative;
 }
+
+.tabs .active::before {
+    content: "";
+    width: 200%;
+    height: 4px;
+    background-color: rgb(83,49,156);
+    position: absolute;
+    bottom: -32px;
+    z-index: 1;
+    left: -50%;
+    border-radius: 10px;
+}
+
+
+.line   {
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    top: 98px;
+    background-color: rgb(231,231,231);
+}
+
