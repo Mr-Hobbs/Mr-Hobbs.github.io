@@ -2,7 +2,6 @@
 body {
     background-color: rgb(233,223,255);
     font-family: 'Open Sans', sans-serif;
-    margin: 0;
     padding: 32px;
     display: flex;
     flex-direction: column;
@@ -30,14 +29,13 @@ h1 {
 
 .tabs {
     display: flex;
-    flex-direction: row;
     width: 100%;
     justify-content: space-around;
     text-transform: uppercase;
     font-weight: bold;
     color: rgb(200,175,255); 
     padding: 16px;
-    
+    margin: 0 0 32px 0;
     
 }
 
@@ -76,3 +74,39 @@ h1 {
     background-color: rgb(231,231,231);
 }
 
+.toggle-wrapper {
+    display: flex;
+    
+}
+
+.toggle-wrapper img {
+    height: 40px;
+    margin: 0 16px;
+}
+
+.toggle {
+    background-color: rgb(83,49,156);
+    height: 32px;
+    width: 140px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4px 0 16px;
+    box-sizing: border-box;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    }
+
+.toggle span:first-of-type {
+    color: white;
+}
+
+.toggle span:last-of-type {
+    background-color: white;
+    color: rgb(83,49,156);
+    padding: 4px 16px;
+    border-radius: 20px;
+
+}
