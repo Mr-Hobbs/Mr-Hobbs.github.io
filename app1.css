@@ -1,0 +1,259 @@
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif; /*called a font stack*/
+    font-size: 60px;
+    font-weight: normal; /*400 = normal too*/
+    /*font-style: italic;*/
+    text-align: center;
+    /*width: 500px;*/
+    letter-spacing: 20px;
+    text-shadow: 3px 3px 2px magenta, 6px 6px 5px cyan;
+
+}
+
+body {
+    font-family: Montserrat, Arial, Helvetica, sans-serif; /*called a font stack*/
+
+}
+
+body {
+    margin: 0;
+    /*width: 800px;*/
+  }
+  .container1 {
+    background-color: rgb(0, 255, 55);
+    width: 100vw;
+    height: 100vh;
+    color: black;
+    text-align: center;
+
+    /* Don't worry about this code yet */
+    display: flex; /* changes the inside of the container */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container2 {
+    background-color: cyan;
+    width: 100vw;
+    height: 50vh;
+    color: black;
+    text-align: center;
+
+    /* Don't worry about this code yet */
+    display: flex; /* changes the inside of the container */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+#links {
+    text-transform: uppercase;
+}
+
+#position_practice {
+    color: orangered;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    position:relative; left:100px; top:2px; width: 500px; 
+    text-shadow: 2px -2px 15px goldenrod;
+}
+
+#span1 {
+    text-decoration-line: underline overline;
+    text-decoration-style: wavy;
+    text-decoration-color: darkmagenta;
+    /*text-decoration: underline wavy orange 10px;*/ /*alternate way*/
+}
+
+.bright {
+    background-color: rgb(50,150,170);
+    color: white;
+}
+
+#cast {
+    list-style-type: "\1F44D";
+}
+
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color: magenta;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.marginCollapsing {
+    border: 2px solid mediumseagreen;
+    margin: 0;
+    margin-bottom: 20px 0;
+}
+
+#common_layout_div {
+    margin-left: 30px;
+} 
+
+.box {
+    width: 50%;
+    min-width: 300px;
+    max-width: 500px;
+    height: 250px;
+    background-color: rgb(21, 199, 140);
+    margin: 0 auto;
+    border: solid olive;
+    border-radius: 10px;
+    font-size: 40px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075),
+    0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075),
+    0 16px 16px hsl(0deg 0% 0% / 0.075);
+}
+
+#borderrad {
+    color: white;
+    padding: 5%;  
+    font-weight: bold;
+}
+
+#animatebutton {
+    padding: 20 px 40 px;
+    text-transform:uppercase;
+    border: 2px solid #e91e63;
+    color: #e91e63;
+    text-decoration: none;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.5s ease; 
+}
+
+/* sibling combinator where only unordered lists that occure after an h2 are affected*/
+h2 + ul {
+    background-color: white; 
+}
+
+/*pseudo-classes that are neat... a:active, a:focus, p:not([id or class or selector here]*/
+
+/*
+p::first-letter {
+    font-size: 25px;
+    color:#e91e63;
+    text-decoration: double; 
+}*/
+
+.pork {
+    background: radial-gradient(#0288d1, #01579b);
+    height: 20vh;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnn {
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 15px 30px;
+    border-radius: 4px;
+    position: relative;
+    background-color: rgba(255,255,255,0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.badge {
+    background-color: #4caf50;
+    padding: 5px 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: -16px;
+    right: -16px;
+}
+
+/* transition starting phase */
+.btn3 {
+    border: 2px solid black;
+    padding: 10px 20px;
+    display: inline-block;
+    position: relative;
+    top: -1rem;
+    left: 3rem;
+    margin-top: 30px;
+    background-color: whitesmoke;
+    transition: background-color 0.5s, color 0.5s, transform 1s ease-in-out 0.5s;
+  }
+  
+  /* and the actual transition when hovering */
+  .btn3:hover {
+    background-color: greenyellow;
+    color: black;
+    transform: translateX(200px)
+  }
+
+  .box2 {
+    border: 2px solid black;
+    position: relative;
+    background-color: slategray;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    margin: 1rem;
+    /*transform: translateX(400px);*/
+  }
+
+  .box2first{
+    transform: translateX(400px);
+    border: 2px solid black;
+    background-color: magenta;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    margin: 1rem;
+    transform: scale(1.2)
+  }
+  
+  .rotate {
+    transform: rotate(-20deg);
+    display: inline-block;
+  }
+
+  ul.no-bullets {
+    list-style-type: none; /* Remove bullets */
+    /*padding: 0;*/ /* Remove padding */
+    /*margin: 0;*/ /* Remove margins */
+  }
+
+  .flexbx {
+    margin: 3rem auto;
+    position: relative;
+    border-radius: 0.8rem;
+    border: rgb(224, 174, 79) 5px solid;
+    padding: 1rem 3rem;
+    text-align: left;
+    max-width: 47%;
+    min-width: 535px;
+  }
+
+  #h2flexbx {
+    color: rgb(15, 33, 199);
+    text-align: center;
+  }
+
+  .listitem {
+    letter-spacing: 0.05rem;
+    margin: 15px 0;
+  }

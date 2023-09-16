@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+<head><!-- Metadata goes in the head -->
+    <link rel="stylesheet" href="G:/Udemy/Udemy HTML/app1.css">
+    <title>My First Webpage</title>
+</head>
+<body><!-- Visible content goes in the body -->
+
+<h1>Hello Everyone. This is an h1 header. </h1>
+<p>This is a paragraph. Use "p" as the tag to create it. </p>
+<p>Lorem ipsum <span id="span1">dolor</span> sit amet, consectetur adipiscing elit, 
+    sed do eiusmod tempor <span id="span2">incididunt</span> ut labore et dolore magna aliqua. 
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+    nisi ut aliquip ex ea <span id="span3">commodo</span> consequat. Duis aute irure dolor in 
+    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+    officia deserunt mollit anim id est laborum.</p>
+<!-- This is a comment -->
+<h2 id="Top" class="bright">Here is the link for the Mozilla Development Network</h2>
+<p>Use it as a resource</p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML">https://developer.mozilla.org/en-US/docs/Web/HTML</a>
+
+<h2>Chrome Developer Tools</h2>
+<h3 class="bright">Chrome Inspector</h3>
+<p>Go to any webpage. Rt-click and select <Strong>Inspect</Strong></p>
+
+<h1> I Am A Level 1 Heading</h1>
+<h2> I Am A Level 2 Heading</h2>
+<h3> I Am A Level 3 Heading</h3>
+<h4> I Am A Level 4 Heading</h4>
+<h5> I Am A Level 5 Heading</h5>
+<h6> I Am A Level 6 Heading</h6>
+<p>Use headings not for their style but for their organization and ability to structure your page as needed.</p>
+<p>Style can be adjusted in CSS. <Strong>See more on headings</Strong> using the link below.</p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements">Mozilla Development Network: Heading Elements</a>
+
+<h2>Unordered Lists</h2>
+<p>Create <strong>unordered lists</strong> using the UL tags, then use LI (list item) tags to populate the list with items. See example below.</p>
+
+<ul>
+    <li>Flour</li>
+    <li>Baking Soda</li>
+    <li>Brown Sugar</li>
+</ul>
+
+<h2>Ordered Lists</h2>
+<p>Create <strong>ordered lists</strong> using the OL tags, then use LI (list item) tags to populate the list with items. See example below.</p>
+
+<ol>
+    <li>Preheat Oven</li>
+    <li>Grease Pans</li>
+    <li>Mix Batter</li>
+</ol>
+
+<h2>Look at this NESTED LIST</h2>
+<ul>
+    <li>Ground beef, 2 pounds</li>
+    <li>Taco Seasoning, two packets </li>
+    <li>Taco Shells
+        <ul>
+            <li>Hard, 1 pack</li>
+            <li>Soft, 1 pack</li>
+        </ul>
+    </li>
+</ul>
+
+<h2>"em" means emphasis</h2>
+<p>"Just <em>do</em> it already!"</p>
+<h2>"i" means idiomatic text (aka italicized)</h2>
+<p>"Just <i>do</i> it already!"</p>
+<h2>"b" means bold</h2>
+<p>"I <b>really</b> need to get to bed"</p>
+<h2>"strong" is a way to mark text with special significance</h2>
+<p>"Time to make the <strong>donuts</strong>"</p>
+
+<h2>Nesting Elements</h2>
+<p>No notes except that elements get nested. We will review this further in the course.</p>
+
+<h2>Superscript and Subscript (sup and sub)</h2>
+<p>4<sup>th</sup> of July. Superscript</p>
+<p>4<sub>th</sub> of July. Subscript</p>
+
+<h2>Inline and Block elements</h2>
+<p>Paragraphs take up a whole block by default. They take up the page from left to right.</p>
+<em>Inlines can exist next to each other</em> <strong>Test</strong>
+
+<h2>Creating Links</h2>
+<ul>
+    <li><a href="https://twitter.com/">Twitter</a></li>
+    <li><a href="https://github.com/">Github</a></li>
+    <li><a href="https://reddit.com/">Reddit</a></li>
+    <li><a href="demo.html">Contact Information</a></li>
+    <li><a href="#Top">Go to Mozilla link above</a></li>
+</ul>
+
+<h2>Relative Link</h2>
+<p>These link to a document you've created. Not an external webpage. The Contact Information link above is an example of this</p>
+
+<h2>Creating Images</h2>
+<img src="G:/Udemy/Udemy HTML/images/images/spacecat.png" alt="Cosmonaught feline comrad">
+<P>Go to <a href="unsplash.com">Unsplash</a> to get images to reference</P>
+<p>You can go there and rt-click an image address. The images at Unsplash are licensed appropriately for your use.</p>
+
+<h2>Here's another image</h2>
+<img src="G:/Udemy/Udemy HTML/FreshPastaExercise/FreshPastaExercise/images/pasta.png" alt="Fresh Pasta">
+ 
+<h2>Forms</h2>
+<p>Text boxes, check fields, drop-down menus, buttons etc.</p>
+
+<!--<form action="http>//www.google.com/search" method="get">
+    <input type="text" name="q">
+    <button type="submit">Submit</button>
+</form> -->
+<!--the 'action' tells where the data should be sent-->
+<p>Not seen here but still happening: name and placeholder attributes in use</p>
+<form action=""> <!--a blank 'action' refreshes the page-->
+    <input type="text" name="firstname" placeholder="First name">
+    <input type="text" name="lastname" placeholder="Last name">
+    <button>Submit</button>
+</form>
+
+<h3>Labels</h3>
+<p>We need to properly label all of our form controls</p>
+<form action=""> <!--a blank 'action' refreshes the page-->
+    <div>
+    <label for="firstname">First Name</label>
+    <input type="text" name="firstname" id="firstname" placeholder="First name" required>
+    <label for="lastname">Last Name</label>
+    <input type="text" name="lastname" id="lastname" placeholder="Last name">
+    </div>
+
+    <div>
+    <label for="pword">Password</label>
+    <input type="password" name="password" placeholder="Password" id="pword">
+    </div>
+    
+    <div>
+    <label for="numberfield">Number</label>
+    <input type="number" name="number" placeholder="Number" id="numberfield">
+    </div>
+
+    <div>
+    <label for="colorfield">Choose a color for fun</label>
+    <input type="color" id="colorfield">
+    </div><br>
+
+    <div>
+    <label for="lottatext">If you have a lot to say put it here:</label>
+    </div>
+    <div>
+    <textarea name="" id="lottatext" cols="30" rows="10">This is a textarea</textarea>
+    </div>
+    
+    <div>
+    <label for="slide">Here is a slide range for fun</label>
+    <input type="range" id="slide"  min="0" max="10" name="volume level" step="1">
+    </div>
+
+    <div>
+    <label for="agree_tos">I agree to the terms of service</label>
+    <input type="checkbox" id="agree_tos" name="tos">
+    </div>
+    
+    <div>
+    <label for="listy">Populate a Select element with Options elements to make a drop-down list</label>
+    <select name="shirtsize" id="listy">
+        <option value="S">Small</option>
+        <option value="M">Medium</option>
+        <option value="L">Large</option>
+        <option value="XL">XL</option>
+    </select>
+    </div>
+    
+    <div style="border: 2px solid rgb(57, 112, 129);">
+    <label for="phone">Call me</label>
+    <input type="radio" id="phone" name="contact" value="phone">
+    <label for="email">Email me</label>
+    <input type="radio" id="email" name="contact" value="email">
+    </div>
+    <button>Submit</button>
+    <!-- match labels to inputs with a for to id attribute combonation -->
+</form>
+<p>Match labels to inputs with a FOR to ID attribute combination</p>
+<p>Other types of inputs covered above are</p>
+<ul>
+    <li>text</li>
+    <li>password</li>
+    <li>number</li>
+    <li>color</li>
+    <li>checkboxes</li>
+    <li>textareas</li>
+    <li>range inputs</li>
+    <li>selects (drop-down lists)</li>
+    <li>radio buttons</li>
+        <ul>
+            <li>To link radio buttons have each radio button element have THE SAME NAME</li>
+        </ul>
+</ul>
+<P>The name attribute specifies the name of an input element. 
+The name attribute is used to reference elements in a JavaScript, or to reference form data after a form is submitted. 
+<b>Note:</b> Only form elements with a name attribute will have their values passed when submitting a form.</P>
+
+<h2>Spans and Divs</h2>
+<p>Spans are generic inline elements. They have no special meaning but can be styled later using CSS</p>
+<p>Divs are generic containers that have no inherent meaning. <br>
+    They are used to group content together for styling.</p>
+
+<h3>Form Controls</h3>
+<p>Lorem ipsum dolor sit amet, <span>consectetur</span> adipiscing elit, sed do eiusmod tempor 
+    incididunt ut labore et dolore <span>magna aliqua</span>. Ut enim ad minim veniam, quis nostrud 
+    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p> <button>HELLO!</button>
+
+
+<br>
+<h2>Tables</h2>
+<p>table is the overtag. Within that are tr (table row) tags and within <b>those</b> are td (table datacell) tags</p>
+<table>
+    <thead> <!--use for extra meaning and structure-->
+    <tr> <!--table row-->
+        <th>Item</th> <!--table header-->
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+    </tr>
+    </thead>
+    <tbody> <!--wrapping tbody around the body-->
+    <tr> <!--table row-->
+        <td>Coffee</td> <!--table datacell-->
+        <td>$2.00</td>
+        <td>10</td>
+        <td>$20.00</td>
+    </tr>
+    <tr>
+        <td>Muffin</td>
+        <td>$3.00</td>
+        <td>8</td>
+        <td>$24.00</td>
+    </tr>
+    <tr>
+        <td>Meat, Egg & Cheese Sandwich</td>
+        <td>$4.50</td>
+        <td>12</td>
+        <td>$54.00</td>
+    </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td><b>Grand Total</b></td>
+            <td></td>
+            <td><b>30</b></td>
+            <td><b>$98.00</b></td>
+        </tr>
+    </tfoot>
+</table>
+<br>
+<h2>Semantic Markup</h2>
+<p>The html tags "say" something about the meaning of their content. Add as much meaning when using markups.</p>
+<p>Check out this <a href="https://developer.mozilla.org/en-US/docs/Glossary/Semantics">semantics glossary</a></p>
+<br>
+<h2>Types of styling</h2>
+<ul>
+    <li>Inline (the worst option)</li>
+    <li>Internal</li>
+    <li>External (the <b>best</b> option)</li>
+</ul>
+<br>
+<h2>Inheritance</h2>
+<p>Some CSS properties, like color, are inherited from parent elements if no value is specified.<br>
+Other properties are not inherited and instead have a default initial value.</p>
+
+<h2>Stylizing Text</h2>
+<h3>Font-Family</h3>
+<p>Font-family controls the font of a particular element</p>
+
+
+<h2>Margin Collapsing</h2>
+<p class="marginCollapsing">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto animi voluptates minus tempore nisi, ut eligendi debitis? Odio natus rem consequatur animi ullam voluptates nulla porro non eveniet doloribus! At.</p>
+<p class="marginCollapsing">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto animi voluptates minus tempore nisi, ut eligendi debitis? Odio natus rem consequatur animi ullam voluptates nulla porro non eveniet doloribus! At.</p>
+
+<h2>A common layout pattern</h2>
+
+<div id="common_layout_div">
+    <h3>Some heading</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatibus, rem assumenda sit fugiat aut hic eum beatae atque ducimus. At iste blanditiis similique fugit distinctio error eaque consequuntur suscipit.</p>
+    <button id="animatebutton">I click</button>
+</div>
+<br>
+<div class="box">
+    <p id="borderrad">This element has class="box". Min-width and max-width. Border Radius. Box-shadow</p>
+
+</div>
+<br>
+
+<h2>The Sibling Combinator</h2>
+<ul>
+    <li>The + combinator selects elements that are directly after the first element</li>
+    <ul>
+        <li>h2 + p {style code here...}    this is what the CSS code would start like</li>
+    </ul>
+    <li>The ~ combinator selects siblings. The 2nd element must follow the 1st element (immediately or not), and they must share the same parent.</li>
+    <ul>
+        <li>h2 ~ p {style code here...}</li>
+    </ul>
+</ul>
+
+<h2>Pseudo-classes</h2>
+<p>Like the <b>button:hover</b> attribute of a button</p>
+
+<ul>
+    <li>:hover</li>
+    <li>:diabled</li>
+        <ul>
+            <li>like a disabled input or button gets greyed out</li>
+        </ul>
+    <li>:placeholder-shown</li>
+        <ul>
+            <li>edit a field that has placeholder text<p/li>
+        </ul>
+    <li>:valid</li>
+    <li>:invalid</li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">MDN - More on Pseudo-Classes</a></li>
+</ul>
+
+<h2>Specificity</h2>
+<p>When multiple rules with different selectors apply to the same element, which one wins out?<br>
+The more specific element wins out.</p>
+<h4>Specificity from Most to Least Specific</h4>
+<ol>
+    <li>Inline Styles</li>
+    <li>ID Selectors</li>
+    <li>Class | Attribute | Pseudo-Class</li>
+    <li>Type | Pseudo-Elements</li>
+</ol>
+
+<h3>More Specificity</h3>
+<p>Selector specificity. This is what gets styled first to last if exists <br>
+
+</p>
+<ol>
+    <li>ID</li>
+    <li>Class, Attribute, Pseudo-Class</li>
+    <li>Type, Pseudo-Elements</li>
+</ol>
+
+<h2>The Cascade of CSS (Cascading Style Sheets)</h2>
+    <p>In the event of a conflict, which rule "wins"?<br>
+    <a href="wattenberger.com/blog/css-cascade">Learn more about the CSS Cascade</a></p>
+<ol>
+    <li>Importance, !important</li>
+    <li>Origin</li>
+    <li>Specificity</li>
+    <li>Position</li>
+</ol>
+
+<h2>CSS Values and units</h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">MDN Values and Units</a></p>
+
+
+<div class="container1">
+    <h2>100vh</h2>
+</div>
+<div class="container2">
+    <h2>50vh</h2>
+</div>
+
+<h2>Backgrounds, gradients, and filters</h2>
+<h3>Backgrounds</h3>
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-image">Background Image Information</a>
+<a href="unsplash.com">Unsplash</a>
+    <ul>
+        <li>background-image</li>
+        <li>background-repeat</li>
+        <ul>
+            <li>This makes sure the background either does repeat or does not repeat</li>
+            <li>background-repeat: no-repeat;</li>
+            <li>background-repeat: repeat-x;</li>
+            <li>background-repeat: repeat-y;</li>
+            <li>background-repeat: repeat; (the default)</li>
+        </ul>
+        <li>background-color</li>
+        <li>background-clip</li>
+        <ul>
+            <li>This controls where the element's background extends underneath</li>
+            <li>background-clip: border-box; image goes under border</li>
+            <li>background-clip: padding-box; image extends to the border but does not go under</li>
+            <li>background-clip: content-box; image</li>
+        </ul>
+        <li>background-position</li>
+        <ul>
+            <li>We use this property to set the initial position of the background image relative to the container that it's the background for.</li>
+            <li>background-position: top; (or left or center or bottom or right)</li>
+            <li>you can do a combination of words (like top right, or top left or bottm right or bottom left)</li>
+            <li>specify a single percentage, that measure will be relative to the left side of the image</li>
+                <ul>
+                    <li>0% = left, 50% = middle, 100% = right</li>
+                </ul>
+        </ul>
+        <li>background-size</li>
+        <ul>
+            <li>Can be a percentage of the box/space the image is in</li>
+        </ul>
+        <li>background-attachment</li>
+    </ul>
+
+<h2>Gradients</h2>
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/gradient">MDN Gradients</a>
+<ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient">background-image: linear-gradient()</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/radial-gradient">radial-gradient</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/conic-gradient">conic-gradient - you can make colored bars circling around a center point</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/repeating-linear-gradient">repeating-linear-gradient</a></li>
+    <li>repeating-radial-gradient</li>
+    <li>repeating-conic-gradient</li>
+</ul>
+
+<h2>The Background Shorthand Property</h2>
+<p>_<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background"> background: (you can do all the things with just background) Click the link for more</a></p>
+
+<h2>Filter</h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter">Filter</a></p>
+
+<h2><b>POSITION</b></h2>
+<p>The <b>Position</b> property specifies where in the document an element will go. It can be fine-tuned from there with the <b>top, right, bottm, left</b>, and <b>z-index</b> properties.</p>
+<ol>
+    <li>position: static</li>
+    <ul>
+        <li>The default value for <b>position</b>!</li>
+        <li>Element fits in the normal flow of the document</li>
+        <li><b>top, right, bottom, left,</b> and <b>z-index</b> have <em>no-effect</em></li>
+    </ul>
+    <li>position: relative</li>
+    <ul>
+        <li>Elements fit in the normal flow of the document, BUT...</li>
+        <li><b>top, right, bottom, left, </b>and <b>z-index</b> can be used to scoot the element from its default spot</li>
+        <li>Even if the element is offset, its original space in the document is maintained</li>
+    </ul>
+    <li>position: absolute</li>
+    <ul>
+        <li>Element is removed from normal document flow, and is now relative to nearest parent element with an explicit <b>position</b> property</li>
+        <li>If no parent has a position property other than default (<b>static</b>), it's relative to the root container</li>
+        <li>No space is left where it used to be!</li>
+        <li><b>top, right, bottom, left, </b>and <b>z-index</b> can be used to scoot the element further</li>
+    </ul>
+    <li>position: fixed</li>
+    <ul>
+        <li>Element is removed from normal document flow, and is positioned relative to root container element</li>
+        <li>NO space is left where it used to be</li>
+        <li><b>top, right, bottom, left,</b> and <b>z-index</b> can be used to  scoot the element relative to the root element</li>
+        <li>When you scroll, it will stay in place!</li>
+    </ul>
+    <li>position: sticky</li>
+</ol>
+
+<h3>z-index</h3>
+<p>Specifies the elevation of an element relative to other elements. THe lower the z-index the farther back/deeper in the stack it is.</p>
+<ul>
+    <li>z-index: 0; is under...</li>
+    <li>z-index: 1; is under...</li>
+    <li>z-index: 2; is under...</li>
+    <li>z-index: 3;</li>
+</ul>
+
+<div class="pork">
+<a href="https://www.linkedin.com/in/spencer-hobbs-ms-a7633926/" class="btnn">
+    Messages
+    <span class="badge">3</span>
+</a>
+</div>
+
+<h2>Transitions</h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition">MDN Transitions Link</a><br>
+<h3>Transition syntax</h3>
+transition: property duration timing-function  delay <br>
+Opacity and Transform are easiest for the page to animate.
+</p>
+<a class="btn3" href="https://www.kirupa.com/html5/timing_functions.htm">Hover Me</a><br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transform property</a><br>
+<a href="https://easings.net/">Easing functions cheat sheet</a><br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transform: *action*</a><br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate">translate()</a><br>
+
+<div class="box2first"></div>
+<div class="box2"></div>
+<div class="box2"></div>
+
+<br><br><br><br><br><br><br><br>
+<h4 class="rotate">Other types of transformations</h4><br><br><br><br><br><br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate">rotate()</a><br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale">scale()</a><br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin">transform-origin()   - this dictates where the point is the item rotates around</a>
+
+<div class="flexbx">
+    <h2 id="h2flexbx">Flexbox!</h2>
+    <ul class="no-bullets">
+        <li class="listitem">Flexbox is a layout method for laying out items in rows or columns</li>
+        <li class="listitem">It is a relatively recent addition to CSS, created to address the difficulty of creating layouts</li>
+        <li class="listitem">Flexbox allows us to distribute space dynamically across elements of an unknown size, hence the term "flex"</li>
+        <li class="listitem">Main axis, cross axis</li>
+        <li class="listitem"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction">Flex Direction</a></li>
+        <li class="listitem"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap">Flex Wrap</a></li>
+        <li>justify-content: flex-start; --- this is the default option. Your content is at the LEFT of the container</li>
+        <li>justify-content: flex-end; --- Your content is at the RIGHT of the container</li>
+        <li>justify-content: center; --- distributes the empty space on the left and right oof the content</li>
+        <li>justify-content: space-between; --- The content touches the edge of the container and space is ditributed evenly between the elements. GOOD FOR NAVBARS</li>
+        <li>justify-content: space-around; --- evenly adds space even on the left and right of the left and right-most elements.</li>
+        <ul>
+            <li class="listitem">All of the above also works for columns as well</li>
+        </ul>
+        <li><b> Order of items to do Flex stuff. All done in the outer container:</b></li>
+        <ol>
+            <li>display: flex;</li>
+            <li>flex-direction: row;   (or column, or row-reverse or column-reverse)</li>
+            <li>justify-content: start; (or flex-start or flex-end or center or space-between or space-around or space-evenly)</li>
+        </ol>
+        <li class="listitem"><b>align-items</b></li>
+        <ol>
+            <li>align-items is used to align elements along the cross access (USUALLY VERTICALLY; perpendicular to the main access).</li>
+            <li>align-items: flex-start</li>
+            <li>align-items: center</li>
+            <li>align-items: flex-end</li>
+            <li>align-items: stretch (THIS IS THE DEFAULT)</li>
+            <li>align-items: space-around</li>
+            <li>align-items: center</li>
+        </ol>
+        <li class="listitem"><b>align-content</b></li>
+        <ol>
+            <li>align-content requires <b>"flex-wrap: wrap;"</b> be enabled in your larger container in order to take effect.</li>
+            <li>align-content: space-between;  -- controls the space between columns or rows</li>
+        </ol>
+        <li class="listitem"><b>align-self</b></li>
+        <ol>
+            <li>align-self is the same context as align items but we assign align-self to an individual flex item. Target one box or element in a container.</li>
+            <li>align-self: flex-end;</li>
+            <li>align-self: flex-start;</li>
+            <li>etc.</li>
+        </ol>
+    </ul>
+    <p>When you want to center something in the middle of a container do: <b>justify-content: center;</b> and <b>align-items: center;</b>.</p>
+    
+    <h3>Additional Flex Properties</h3>
+    <p>These apply to elements INSIDE the Flex Container</p>
+    <ul>
+        <li><b><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex">Flex</a></b></li>
+        <ul>
+            <li>flex: is shorthand for flex-grow, flex-shrink, & flex-basis</li>
+            <li>It sets how a flex <b>item</b> will grow or shrink to fit the space available in its flex container </li>
+        </ul>
+        <li>flex-grow</li>
+        <ul>
+            <li>Dictates how much of the available space inside the flex container the item should take up</li>
+            <li>flex-grow: 1</li>
+            <li>flex-grow: 2</li>
+            <ul>
+                <li>This element would take up twice as much empty space as the other element</li>
+            </ul>
+        </ul>
+        <li>flex-shrink</li>
+        <ul>
+            <li>Sets the flex shrink factor of a flex item. If the size of all flex items is larger than the flex container, items shrink to fit according to flex-shrink.</li>
+            <ul>
+                <li>flex-shrink: 1</li>
+                <li>flex-shrink: 3</li>
+                <ul>
+                    <li>This element shrinks 3 times faster than the other</li>
+                </ul>
+            </ul>
+        </ul>
+        <li>flex-basis</li>
+        <ul>
+            <li>flex-basis sets the initial main size of a flex item. It sets the size of the content box unless otherwise set with box-sizing (width/height)</li>
+            <li>If <b>flex-direction: row</b> then flex-basis sets the width. If <b>flex-direction: column</b> then flex-basis sets the height </li>
+        </ul>
+        <li><a href="https://www.udemy.com/course/html-and-css-bootcamp/learn/lecture/35908040#overview">Review flex on Udemy</a></li>
+        <li><b>Order</b> Flex Item</li>
+        <ul>
+            <li>It is a property to apply to a flex item to change the order that the elements are sorted by in that container.</li>
+        </ul>
+        <li>Flex box is good for navbars. For full pages, using b <b>CSS Grid</b> is better (we learn this later)</li>
+    </ul>
+    </div>
+
+    <h2>Media Queries</h2>
+    <p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Media_queries">Beginner's guide to media queries</a></p>
+    <p><b>Media queries</b> allow us to specify styles that are only applied at certain device screen widths. They are the lifeblood of developing finely-tuned responsive websites! <br><br>
+    <b>@media</b> initiates a media query, and allows us to follow up by specifying other important properties <br><br>
+    <b>only</b> is a keyword called a <i>logical operator</i> that prevents older browsers that don't support media queries from applying these styles. Otherwise, an older browser would apply these styles in general (and not just for the specified screen width)    
+    
+
+    </p>
+
+</body>
+</html>
