@@ -48,11 +48,10 @@ span {
 
 @media only screen and (max-width: 650px) {
   h1 {
-    font-size: 60px;
+    font-size: 55px;
   }
   h2 {
-    font-size: 40px;
-    color: green;
+    font-size: 35px;
   }
   span {
     text-shadow: 0 -3.75px #0c2ffb, 0 -7.5px #2cfcfd, 0 3.75px #fb203b,
