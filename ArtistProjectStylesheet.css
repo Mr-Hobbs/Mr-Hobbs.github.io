@@ -32,7 +32,6 @@ a.active {
     border-bottom: 1px solid black;
 }
 
-
 .card {
     width: 49.75%;
     min-width: 400px;
@@ -86,3 +85,37 @@ h3::selection {
     margin-top: 0;  
 }
 
+@media only screen and (max-width: 1000px) {
+    .card {
+        width: 100%;
+    }
+    .about {
+        margin: 100px 0 100px 100px;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+    .card {
+        padding: 0;
+    }
+    .wrapper {
+        padding: 8 px;
+    }
+    .about {
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .card {
+        padding: 0;
+    }
+    .wrapper {
+        padding: 8px;
+    }
+    .about {
+        margin: 100px auto;
+        min-width: 350px;
+    }
+}
