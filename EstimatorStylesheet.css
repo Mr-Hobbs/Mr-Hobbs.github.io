@@ -308,4 +308,10 @@ hr {
         width: 90%;
         justify-content: space-around;
     }
+    .tabs p {
+        padding: 3px;
+    }
+    .tabs p.active::before {
+        display: none;
+    }
 }
