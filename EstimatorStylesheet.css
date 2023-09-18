@@ -314,4 +314,7 @@ hr {
     .tabs p.active::before {
         display: none;
     }
+    .toggle span:last-of-type {
+        padding: 4px 12px;    
+    }
 }
