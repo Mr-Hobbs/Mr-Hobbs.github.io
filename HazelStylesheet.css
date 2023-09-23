@@ -184,6 +184,12 @@ body {
     }
   }
 
+  @media only screen and (max-width: 420px){
+    .hero{background-color: white;
+    color: black;
+    }
+  }
+
   @media only screen and (max-width: 375px){
     .tagline {
         font-size: 2.75rem;
