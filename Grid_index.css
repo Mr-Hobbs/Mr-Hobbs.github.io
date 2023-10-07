@@ -2,8 +2,59 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+.container {  /* wrapping everything in a container to center everything in one fell swoop (instead of individually centering the elements like navebar) */
+    margin: 0 auto;
+    max-width: 90%;
+    padding: 0 16px;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 64px 0;
+}
+
+.navbar .left {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.navbar .right {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .right img {
+    width: 24px;
+    height: 24px;
+}
+
+.navbar .right a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar .right a:hover {
+    text-decoration: underline;
+}
+
+.navbar .bar {
+    background-color: black;
+    height: 4px;
+    width: 36px;
+    margin: 3px;
+    border-radius: 20%;
+}
+
+.navbar .hamburger {
+    display: none;
+}
+
 .project-grid {
-    display: grid; /* making the oarent container a grid*/
+    display: grid; /* making the parent container a grid*/
     grid-template-areas:
     "eth eth alphabet"
     "eth eth traveler"
@@ -16,46 +67,36 @@ body {
     column-gap: 16px;*/
     grid-gap: 16px;
     width: 100%;
-    max-width: 90%;
-    margin: 0 auto;
-
 }
 
 #eth {
     grid-area: eth;
 }
-
+#alphabet {
+    grid-area: alphabet;
+  }
 #traveler {
     grid-area: traveler;
 }
-
 #cube {
     grid-area: cube;
 }
-
 #astro {
     grid-area: astro;
 }
-
 #cup {
     grid-area: cup;
 }
-
 #insta {
     grid-area: insta;
 }
-
 #foam {
     grid-area: foam;
 }
-
 #dimentional {
     grid-area: dimentional;
 }
 
-#insta {
-    grid-area: insta;
-}
 
 .project {
     /*width: 600px;*/
@@ -68,7 +109,7 @@ body {
     object-fit: cover; /* This tells the image how it should fit within the parent element*/
 }
 
-.project .overlay {
+.overlay {
     background-color: rgba(255,255,255,0.1); /* we will turn this on when we hover*/
     position: absolute;
     top: 0; /* positioning based on the element it's in WHEN that element has a position: xyz in it*/
@@ -84,7 +125,14 @@ body {
     letter-spacing: 2px;
     opacity: 0; /*fully invisible, transparent*/
     transition: all 0.2s ease;/* adding a transition*/
+    color: black;
 }
+
+.overlay.white {
+    color:yellow;
+}
+
+
 
 .project .overlay:hover {
     opacity: 1; /* fully visible, opaque*/
@@ -92,6 +140,71 @@ body {
 } 
 
 .link {
-    text-decoration: none;
-    color: black;   
+    text-decoration: none;      
+}
+
+.footer {
+    text-align: center;
+    padding: 64px;
+}
+
+
+
+/* adding media queries */
+@media only screen and (max-width: 1100px) {
+    .project-grid {grid-template-areas:
+    "eth eth"
+    "alphabet traveler"
+    "cube astro"
+    "insta insta"
+    "cup foam"
+    "dimentional dimentional";
+    max-width: 100%;
+    }
+    .container {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        padding: 20px 0;
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 2; /* works as 1 too */
+        background-color: white;
+    }
+    
+    .project-grid {
+    margin-top: 0px;    
+    grid-template-areas:
+    "eth eth"
+    "alphabet alphabet"
+    "traveler traveler"
+    "cube astro"
+    "insta insta"
+    "cup cup"
+    "foam foam"
+    "dimentional dimentional";
+    max-width: 100%;
+    row-gap: 10px;
+    column-gap: 0px
+    }
+    .project .overlay {
+        font-size: 24px;
+    }
+    .footer {
+        padding: 30px;
+    }
+    .navbar .right {
+        display: none;
+    }
+    .navbar .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+
 }
