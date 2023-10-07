@@ -1,0 +1,97 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.project-grid {
+    display: grid; /* making the oarent container a grid*/
+    grid-template-areas:
+    "eth eth alphabet"
+    "eth eth traveler"
+    "cube astro traveler"
+    "cup insta insta"
+    "cup insta insta"
+    "foam foam dimentional"
+    "foam foam dimentional";
+    /*row-gap: 16PX;
+    column-gap: 16px;*/
+    grid-gap: 16px;
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+
+}
+
+#eth {
+    grid-area: eth;
+}
+
+#traveler {
+    grid-area: traveler;
+}
+
+#cube {
+    grid-area: cube;
+}
+
+#astro {
+    grid-area: astro;
+}
+
+#cup {
+    grid-area: cup;
+}
+
+#insta {
+    grid-area: insta;
+}
+
+#foam {
+    grid-area: foam;
+}
+
+#dimentional {
+    grid-area: dimentional;
+}
+
+#insta {
+    grid-area: insta;
+}
+
+.project {
+    /*width: 600px;*/
+    position: relative;
+}
+
+.project img {
+    width: 100%; /*Giving the img the width and height of it's parent element*/
+    height: 100%; /* Without this it just runs over the parent element and overflows across the page*/
+    object-fit: cover; /* This tells the image how it should fit within the parent element*/
+}
+
+.project .overlay {
+    background-color: rgba(255,255,255,0.1); /* we will turn this on when we hover*/
+    position: absolute;
+    top: 0; /* positioning based on the element it's in WHEN that element has a position: xyz in it*/
+    left: 0;
+    width: 100%; /* make overlay the same size as it's parent (.project)*/
+    height: 100%; /* make overlay the same size as it's parent (.project)*/
+    display: flex; /* make it so we can center the content*/
+    justify-content: center; /* center the content horizontally*/
+    align-items: center; /* center the content vertically*/
+    margin: 0; /* remove this paragraph's default margin*/
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    opacity: 0; /*fully invisible, transparent*/
+    transition: all 0.2s ease;/* adding a transition*/
+}
+
+.project .overlay:hover {
+    opacity: 1; /* fully visible, opaque*/
+    cursor: pointer;
+} 
+
+.link {
+    text-decoration: none;
+    color: black;   
+}
