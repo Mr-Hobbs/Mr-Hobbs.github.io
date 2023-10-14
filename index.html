@@ -124,7 +124,34 @@
            cursor: pointer;
            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+           animation-name: spin;
+           animation-duration: 15s;
+           animation-delay: 15s;
+           animation-iteration-count: 2;
         }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            1.5% {
+                transform: rotate(5deg);
+            }
+            3% {
+                transform: rotate(-5deg);
+            }
+            4.5% {
+                transform: rotate(5deg);
+            }
+            6% {
+                transform: rotate(-5deg);
+            }
+            7.5% {
+                transform: rotate(0deg);
+            }
+        }
+
+
         .contact:hover {
             /*transform: translateY(-20px);*/
             box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 13px rgba(0, 0, 0, 0.22);
@@ -148,7 +175,7 @@
             font-size: 1.8rem;
         }
 
-        @media only screen and (max-width: 400px) {
+        @media only screen and (max-width: 400px){
             .contact {
             text-align: center;
             margin: 0 auto;
@@ -189,9 +216,9 @@
         <li class="listicle"><a class="link" href="./BlogPostMainPage.html">Typography Blog Post</a></li>
         <li class="listicle"><a class="link" href="./HazelCV.html">CV Example</a></li>
         
-        <li class="listicle"><a class="link" href="./CostEstimator.html">Cost Estimator</a></li>
-        <li class="listicle"><a class="link" href="./Grid_index.html">Portfolio Project</a></li>
-        <!--<li class="listicle"><a class="link" href="./HazelCV.html">CV Example</a></li>
+        <li class="listicle"><a class="link" href="./CostEstimator.html">Cost Estimator Project</a></li>
+        <!--<li class="listicle"><a class="link" href="./BlogPostMainPage.html">Typography Blog Post</a></li>
+        <li class="listicle"><a class="link" href="./HazelCV.html">CV Example</a></li>
         
         <li class="listicle"><a class="link" href="./CostEstimator.html">Artist Project</a></li>
         <li class="listicle"><a class="link" href="./BlogPostMainPage.html">Typography Blog Post</a></li>
