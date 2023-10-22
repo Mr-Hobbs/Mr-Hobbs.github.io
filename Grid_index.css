@@ -53,6 +53,37 @@ body {
     display: none;
 }
 
+.mobileNav  {
+    width: 80px;
+    background-color: white;
+    height: 100vh;
+    display: flex; /* turn on flexbox */
+    flex-direction: column;/* align the content into a column */
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* keep it stuck on the page, no scrolling */
+    z-index: 2; /* bringing it in front of all of the other elements*/
+    top: 0;/* attach it to the top and right side of the screen */
+    right: 0;/* attach it to the top and right side of the screen */
+    padding: 16px;
+}
+
+.mobileNav img { /*making the images in the navbar small*/
+    width: 24px;
+    height: 24px;
+
+}
+
+.mobileNav a {
+    text-decoration: none;
+    color: black;
+    margin: 16px 0;
+}
+
+.mobileNav a:hover {
+    text-decoration: underline;
+}
+
 .project-grid {
     display: grid; /* making the parent container a grid*/
     grid-template-areas:
