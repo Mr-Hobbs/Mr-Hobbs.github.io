@@ -27,21 +27,22 @@ body {
     align-items: center;
 }
 
+.navbar .right a {
+    text-decoration: none;
+    color: black;
+}
+.navbar .right a:hover {
+    text-decoration: underline;
+}
+
 .navbar .right img {
     width: 24px;
     height: 24px;
 }
 
-.navbar .right a {
-    text-decoration: none;
-    color: black;
-}
-
-.navbar .right a:hover {
-    text-decoration: underline;
-}
-
-.navbar .bar {
+.bar1,
+.bar2,
+.bar3 {
     background-color: black;
     height: 4px;
     width: 36px;
@@ -207,61 +208,69 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-    .navbar {
-        padding: 20px 0;
-        position: sticky;
-        top: 0;
-        left: 0;
-        z-index: 2; /* works as 1 too */
-        background-color: white;
-    }
-    
-    .project-grid {
-    margin-top: 0px;    
-    grid-template-areas:
-    "eth eth"
-    "alphabet alphabet"
-    "traveler traveler"
-    "cube astro"
-    "insta insta"
-    "cup cup"
-    "foam foam"
-    "dimentional dimentional";
-    max-width: 100%;
-    row-gap: 10px;
-    column-gap: 0px
-    }
-    .project .overlay {
-        font-size: 24px;
-    }
-    .footer {
-        padding: 30px;
-    }
-    .navbar .right {
-        display: none;
-    }
-    .navbar .hamburger {
+  .project-grid {
+    margin-top: 100px;
+  }
+  .navbar {
+    padding: 16px 24px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: white;
+    width: 100%;
+  }
+  .navbar .right {
+    display: none;
+  }
+  .navbar .hamburger {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 3;
-
-    }
+  }
+  .footer {
+    font-size: 14px;
+    padding: 32px;
+  }
+  .project-grid {
+    grid-template-areas:
+      "eth eth"
+      "alphabet alphabet"
+      "traveler traveler"
+      "astro cube"
+      "insta insta"
+      "cup cup"
+      "foam foam"
+      "dimensional dimensional";
+  }
+  .project .overlay {
+    font-size: 24px;
+  }
 }
 
 .animateBar1 {
     animation: flipBar1 0.25s;
+    animation-fill-mode: forwards;
 }
-
 .animateBar2 {
     animation: fadeBar2 0.25s;
+    animation-fill-mode: forwards;
 }
-
 .animateBar3{
     animation: flipBar3 0.25s;
+    animation-fill-mode: forwards;
 }
 
+@keyframes flipBar1 {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(45deg) translate(4px,10px);
+    }
+}
 
 @keyframes fadeBar2 {
     0% {
@@ -274,15 +283,6 @@ body {
     }
 }
 
-@keyframes flipBar1 {
-    0% {
-        transform: rotate(0);
-    }
-    100% {
-        transform: rotate(45deg) translate(4px,10px);
-    }
-}
-
 
 @keyframes flipBar3 {
     0% {
@@ -292,4 +292,3 @@ body {
         transform: rotate(-45deg) translate(4px,-10px); /* transfor origin also can work */
     }
 }
-
