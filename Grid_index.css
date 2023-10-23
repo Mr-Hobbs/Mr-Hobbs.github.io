@@ -247,6 +247,7 @@ body {
     max-width: 100%;
     row-gap: 10px;
     column-gap: 0px;
+    box-sizing: border-box;
   }
   .project .overlay {
     font-size: 24px;
