@@ -236,7 +236,7 @@ body {
   }
   .project-grid {
     grid-template-areas:
-      "eth eth"
+      "eth eth eth"
       "alphabet alphabet alphabet"
       "traveler traveler traveler"
       "cube cube astro"
