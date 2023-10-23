@@ -1,210 +1,190 @@
 body {
-    font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-.container {  /* wrapping everything in a container to center everything in one fell swoop (instead of individually centering the elements like navebar) */
-    margin: 0 auto;
-    max-width: 90%;
-    padding: 0 16px;
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 0 16px;
 }
-
-
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 64px 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 64px 0;
 }
-
 .navbar .left {
-    font-size: 32px;
-    font-weight: bold;
+  font-size: 32px;
+  font-weight: bold;
 }
-
 .navbar .right {
-    width: 400px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
 .navbar .right a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 .navbar .right a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .navbar .right img {
-    width: 24px;
-    height: 24px;
+  width: 24px;
+  height: 24px;
 }
 
 .bar1,
 .bar2,
 .bar3 {
-    background-color: black;
-    height: 4px;
-    width: 36px;
-    margin: 3px;
-    border-radius: 20%;
+  background-color: black;
+  height: 4px;
+  width: 36px;
+  margin: 3px;
+  border-radius: 10px;
 }
 
 .navbar .hamburger {
-    display: none;
+  display: none;
 }
 
 .navbar .hamburger:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-.mobileNav  {
-    width: 80px;
-    background-color: white;
-    height: 100vh;
-    display: flex; /* turn on flexbox */
-    flex-direction: column;/* align the content into a column */
-    justify-content: center;
-    align-items: center;
-    position: fixed; /* keep it stuck on the page, no scrolling */
-    z-index: 2; /* bringing it in front of all of the other elements*/
-    top: 0;/* attach it to the top and right side of the screen */
-    right: -160px;/* attach it to the top and right side of the screen */
-    padding: 16px;
-    transition: transform 0.25s;
+.mobileNav {
+  width: 80px;
+  background-color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: -160px;
+  padding: 16px;
+  transition: transform 0.3s;
 }
-
-.mobileNav img { /*making the images in the navbar small*/
-    width: 24px;
-    height: 24px;
-
+.mobileNav img {
+  width: 24px;
+  height: 24px;
 }
 
 .openDrawer {
-    transform: translateX(-160px)
+  transform: translateX(-160px);
 }
 
 .mobileNav a {
-    text-decoration: none;
-    color: black;
-    margin: 16px 0;
+  text-decoration: none;
+  color: black;
+  margin: 16px 0;
 }
-
 .mobileNav a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .project-grid {
-    display: grid; /* making the parent container a grid*/
-    grid-template-areas:
+  display: grid;
+  grid-template-areas:
     "eth eth alphabet"
     "eth eth traveler"
-    "cube astro traveler"
+    "astro cube traveler"
     "cup insta insta"
     "cup insta insta"
-    "foam foam dimentional"
-    "foam foam dimentional";
-    /*row-gap: 16PX;
-    column-gap: 16px;*/
-    grid-gap: 16px;
-    width: 100%;
+    "foam foam dimensional"
+    "foam foam dimensional";
+  grid-gap: 16px;
+  width: 100%;
 }
 
 #eth {
-    grid-area: eth;
+  grid-area: eth;
 }
 #alphabet {
-    grid-area: alphabet;
-  }
-#traveler {
-    grid-area: traveler;
+  grid-area: alphabet;
 }
-#cube {
-    grid-area: cube;
+#traveler {
+  grid-area: traveler;
 }
 #astro {
-    grid-area: astro;
+  grid-area: astro;
+}
+#cube {
+  grid-area: cube;
 }
 #cup {
-    grid-area: cup;
+  grid-area: cup;
 }
 #insta {
-    grid-area: insta;
+  grid-area: insta;
 }
 #foam {
-    grid-area: foam;
+  grid-area: foam;
 }
-#dimentional {
-    grid-area: dimentional;
+#dimensional {
+  grid-area: dimensional;
 }
-
 
 .project {
-    /*width: 600px;*/
-    position: relative;
+  /* width: 600px; */
+  position: relative;
 }
 
 .project img {
-    width: 100%; /*Giving the img the width and height of it's parent element*/
-    height: 100%; /* Without this it just runs over the parent element and overflows across the page*/
-    object-fit: cover; /* This tells the image how it should fit within the parent element*/
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
 }
 
-.overlay {
-    background-color: rgba(255,255,255,0.1); /* we will turn this on when we hover*/
-    position: absolute;
-    top: 0; /* positioning based on the element it's in WHEN that element has a position: xyz in it*/
-    left: 0;
-    width: 100%; /* make overlay the same size as it's parent (.project)*/
-    height: 100%; /* make overlay the same size as it's parent (.project)*/
-    display: flex; /* make it so we can center the content*/
-    justify-content: center; /* center the content horizontally*/
-    align-items: center; /* center the content vertically*/
-    margin: 0; /* remove this paragraph's default margin*/
-    font-size: 36px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    opacity: 0; /*fully invisible, transparent*/
-    transition: all 0.2s ease;/* adding a transition*/
-    color: black;
+.project .overlay {
+  background-color: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.project .overlay:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 
 .overlay.white {
-    color:yellow;
-}
-
-
-
-.project .overlay:hover {
-    opacity: 1; /* fully visible, opaque*/
-    cursor: pointer;
-} 
-
-.link {
-    text-decoration: none;      
+  color: white;
 }
 
 .footer {
-    text-align: center;
-    padding: 64px;
+  text-align: center;
+  padding: 64px;
 }
 
-
-
-/* adding media queries */
 @media only screen and (max-width: 1100px) {
-    .project-grid {grid-template-areas:
-    "eth eth"
-    "alphabet traveler"
-    "cube astro"
-    "insta insta"
-    "cup foam"
-    "dimentional dimentional";
+  .container {
     max-width: 100%;
-    }
-    .container {
-        max-width: 100%;
-    }
+  }
+  .project-grid {
+    max-width: 100%;
+    grid-template-areas:
+      "eth eth"
+      "alphabet traveler"
+      "astro cube"
+      "insta insta"
+      "cup foam"
+      "dimensional dimensional";
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -239,14 +219,11 @@ body {
       "eth eth"
       "alphabet alphabet"
       "traveler traveler"
-      "cube astro"
+      "astro cube"
       "insta insta"
       "cup cup"
       "foam foam"
       "dimensional dimensional";
-    max-width: 100%;
-    row-gap: 10px;
-    column-gap: 0px;
   }
   .project .overlay {
     font-size: 24px;
@@ -254,44 +231,42 @@ body {
 }
 
 .animateBar1 {
-    animation: flipBar1 0.25s;
-    animation-fill-mode: forwards;
+  animation: flipBar1 0.5s;
+  animation-fill-mode: forwards;
 }
 .animateBar2 {
-    animation: fadeBar2 0.25s;
-    animation-fill-mode: forwards;
+  animation: fadeBar2 0.5s;
+  animation-fill-mode: forwards;
 }
-.animateBar3{
-    animation: flipBar3 0.25s;
-    animation-fill-mode: forwards;
+.animateBar3 {
+  animation: flipBar3 0.5s;
+  animation-fill-mode: forwards;
 }
-
 @keyframes flipBar1 {
-    0% {
-        transform: rotate(0);
-    }
-    100% {
-        transform: rotate(45deg) translate(4px,10px);
-    }
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(45deg) translate(4px, 10px);
+  }
 }
 
 @keyframes fadeBar2 {
-    0% {
-        transform: scaleX(1);
-        opacity: 1;
-    }
-    100% {
-        transform: scaleX(0);
-        opacity: 0;
-    }
+  from {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  to {
+    transform: scaleX(0);
+    opacity: 0;
+  }
 }
 
-
 @keyframes flipBar3 {
-    0% {
-        transform: rotate(0);
-    }
-    100% {
-        transform: rotate(-45deg) translate(4px,-10px); /* transfor origin also can work */
-    }
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-45deg) translate(4px, -10px);
+  }
 }
