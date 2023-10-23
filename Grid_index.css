@@ -236,14 +236,14 @@ body {
   }
   .project-grid {
     grid-template-areas:
-      "eth eth eth"
-      "alphabet alphabet alphabet"
-      "traveler traveler traveler"
-      "cube cube astro"
-      "insta insta insta"
-      "cup cup cup"
-      "foam foam foam"
-      "dimensional dimensional dimensional";
+      "eth eth"
+      "alphabet alphabet"
+      "traveler traveler"
+      "cube astro"
+      "insta insta"
+      "cup cup"
+      "foam foam"
+      "dimensional dimensional";
     max-width: 100%;
     row-gap: 10px;
     column-gap: 0px
