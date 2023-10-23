@@ -208,9 +208,6 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-  body {
-    background-color: pink;
-  }
   .project-grid {
     margin-top: 100px;
   }
@@ -247,7 +244,7 @@ body {
       "cup cup"
       "foam foam"
       "dimensional dimensional";
-    max-width: 100%;
+    max-width: 95%;
     row-gap: 10px;
     column-gap: 0px;
   }
