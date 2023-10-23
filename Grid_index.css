@@ -235,7 +235,7 @@ body {
     padding: 32px;
   }
   .project-grid {
-    grid-template-areas:
+    /*grid-template-areas:
       "eth eth"
       "alphabet alphabet"
       "traveler traveler"
@@ -243,8 +243,8 @@ body {
       "insta insta"
       "cup cup"
       "foam foam"
-      "dimensional dimensional";
-    max-width: 95%;
+      "dimensional dimensional";*/
+    max-width: 100%;
     row-gap: 10px;
     column-gap: 0px;
   }
