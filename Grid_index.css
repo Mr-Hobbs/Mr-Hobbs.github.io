@@ -228,7 +228,7 @@ body {
         "cup cup"
         "foam foam"
         "dimensional dimensional"; 
-        column-gap: 0px;
+        /*column-gap: 0px;*/
     }
     .project .overlay {
       font-size: 24px;
