@@ -1,157 +1,148 @@
 body {
-    font-family: 'Poppins', sans-serif;
-}
-
-.container {  /* wrapping everything in a container to center everything in one fell swoop (instead of individually centering the elements like navebar) */
-    margin: 0 auto;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .container { /* wrapping everything in a container to center everything in one fell swoop (instead of individually centering the elements like navebar) */
     max-width: 90%;
+    margin: 0 auto;
     padding: 0 16px;
-}
-
-
-.navbar {
+  }
+  .navbar {
     display: flex;
     justify-content: space-between;
     padding: 64px 0;
-}
-
-.navbar .left {
+  }
+  .navbar .left {
     font-size: 32px;
     font-weight: bold;
-}
-
-.navbar .right {
+  }
+  .navbar .right {
     width: 400px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.navbar .right a {
+  }
+  .navbar .right a {
     text-decoration: none;
     color: black;
-}
-.navbar .right a:hover {
+  }
+  .navbar .right a:hover {
     text-decoration: underline;
-}
-
-.navbar .right img {
+  }
+  
+  .navbar .right img {
     width: 24px;
     height: 24px;
-}
-
-.bar1,
-.bar2,
-.bar3 {
+  }
+  
+  .bar1,
+  .bar2,
+  .bar3 {
     background-color: black;
     height: 4px;
     width: 36px;
     margin: 3px;
-    border-radius: 20%;
-}
-
-.navbar .hamburger {
+    border-radius: 10px;
+  }
+  
+  .navbar .hamburger {
     display: none;
-}
-
-.navbar .hamburger:hover {
+  }
+  
+  .navbar .hamburger:hover {
     cursor: pointer;
-}
-
-.mobileNav  {
+  }
+  
+  .mobileNav {
     width: 80px;
     background-color: white;
     height: 100vh;
     display: flex; /* turn on flexbox */
-    flex-direction: column;/* align the content into a column */
+    flex-direction: column; /* align the content into a column */
     justify-content: center;
     align-items: center;
     position: fixed; /* keep it stuck on the page, no scrolling */
     z-index: 2; /* bringing it in front of all of the other elements*/
-    top: 0;/* attach it to the top and right side of the screen */
-    right: -160px;/* attach it to the top and right side of the screen */
+    top: 0; /* attach it to the top and right side of the screen */
+    right: -160px; /* attach it to the top and right side of the screen */
     padding: 16px;
     transition: transform 0.25s;
-}
-
-.mobileNav img { /*making the images in the navbar small*/
+  }
+  .mobileNav img { /*making the images in the navbar small*/
     width: 24px;
     height: 24px;
-
-}
-
-.openDrawer {
-    transform: translateX(-160px)
-}
-
-.mobileNav a {
+  }
+  
+  .openDrawer {
+    transform: translateX(-160px);
+  }
+  
+  .mobileNav a {
     text-decoration: none;
     color: black;
     margin: 16px 0;
-}
-
-.mobileNav a:hover {
+  }
+  .mobileNav a:hover {
     text-decoration: underline;
-}
-
-.project-grid {
+  }
+  
+  .project-grid {
     display: grid; /* making the parent container a grid*/
     grid-template-areas:
-    "eth eth alphabet"
-    "eth eth traveler"
-    "cube astro traveler"
-    "cup insta insta"
-    "cup insta insta"
-    "foam foam dimentional"
-    "foam foam dimentional";
-    /*row-gap: 16PX;
+      "eth eth alphabet"
+      "eth eth traveler"
+      "astro cube traveler"
+      "cup insta insta"
+      "cup insta insta"
+      "foam foam dimensional"
+      "foam foam dimensional";
+      /*row-gap: 16PX;
     column-gap: 16px;*/
     grid-gap: 16px;
     width: 100%;
-}
-
-#eth {
+  }
+  
+  #eth {
     grid-area: eth;
-}
-#alphabet {
+  }
+  #alphabet {
     grid-area: alphabet;
   }
-#traveler {
+  #traveler {
     grid-area: traveler;
-}
-#cube {
-    grid-area: cube;
-}
-#astro {
+  }
+  #astro {
     grid-area: astro;
-}
-#cup {
+  }
+  #cube {
+    grid-area: cube;
+  }
+  #cup {
     grid-area: cup;
-}
-#insta {
+  }
+  #insta {
     grid-area: insta;
-}
-#foam {
+  }
+  #foam {
     grid-area: foam;
-}
-#dimentional {
-    grid-area: dimentional;
-}
-
-
-.project {
-    /*width: 600px;*/
+  }
+  #dimensional {
+    grid-area: dimensional;
+  }
+  
+  .project {
+    /* width: 600px; */
     position: relative;
-}
-
-.project img {
+  }
+  
+  .project img {
     width: 100%; /*Giving the img the width and height of it's parent element*/
     height: 100%; /* Without this it just runs over the parent element and overflows across the page*/
     object-fit: cover; /* This tells the image how it should fit within the parent element*/
-}
-
-.overlay {
-    background-color: rgba(255,255,255,0.1); /* we will turn this on when we hover*/
+  }
+  
+  .project .overlay {
+    background-color: rgba(255, 255, 255, 0.1); /* we will turn this on when we hover*/
     position: absolute;
     top: 0; /* positioning based on the element it's in WHEN that element has a position: xyz in it*/
     left: 0;
@@ -166,132 +157,122 @@ body {
     letter-spacing: 2px;
     opacity: 0; /*fully invisible, transparent*/
     transition: all 0.2s ease;/* adding a transition*/
-    color: black;
-}
-
-.overlay.white {
-    color:yellow;
-}
-
-
-
-.project .overlay:hover {
+    color: black; /*difference here*/
+  }
+  
+  .project .overlay:hover {
     opacity: 1; /* fully visible, opaque*/
     cursor: pointer;
-} 
-
-.link {
-    text-decoration: none;      
+  }
+  
+  .overlay.white {
+    color:white; 
 }
-
-.footer {
+  
+  
+  .footer {
     text-align: center;
     padding: 64px;
-}
-
-
-
-/* adding media queries */
-@media only screen and (max-width: 1100px) {
-    .project-grid {grid-template-areas:
-    "eth eth"
-    "alphabet traveler"
-    "cube astro"
-    "insta insta"
-    "cup foam"
-    "dimentional dimentional";
-    max-width: 100%;
-    }
+  }
+  
+  @media only screen and (max-width: 1100px) {
     .container {
-        max-width: 100%;
+      max-width: 100%;
     }
-}
-
-@media only screen and (max-width: 768px) {
-  .project-grid {
-    margin-top: 100px;
+    .project-grid {
+      max-width: 100%;
+      grid-template-areas:
+        "eth eth"
+        "alphabet traveler"
+        "astro cube"
+        "insta insta"
+        "cup foam"
+        "dimensional dimensional";
+    }
   }
-  .navbar {
-    padding: 16px 24px;
-    box-sizing: border-box;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 3;
-    background-color: white;
-    width: 100%;
+  
+  @media only screen and (max-width: 768px) {
+    .project-grid {
+      margin-top: 100px;
+    }
+    .navbar {
+      padding: 16px 24px;
+      box-sizing: border-box;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 3;
+      background-color: white;
+      width: 100%;
+    }
+    .navbar .right {
+      display: none;
+    }
+    .navbar .hamburger {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .footer {
+      font-size: 14px;
+      padding: 32px;
+    }
+    .project-grid {
+      grid-template-areas:
+        "eth eth"
+        "alphabet alphabet"
+        "traveler traveler"
+        "cube astro"
+        "insta insta"
+        "cup cup"
+        "foam foam"
+        "dimensional dimensional"; 
+        column-gap: 0px;
+    }
+    .project .overlay {
+      font-size: 24px;
+    }
   }
-  .navbar .right {
-    display: none;
-  }
-  .navbar .hamburger {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .footer {
-    font-size: 14px;
-    padding: 32px;
-  }
-  .project-grid {
-    /*grid-template-areas:
-      "eth eth"
-      "alphabet alphabet"
-      "traveler traveler"
-      "cube astro"
-      "insta insta"
-      "cup cup"
-      "foam foam"
-      "dimensional dimensional";*/
-    max-width: 100%;
-    row-gap: 10px;
-    column-gap: 0px;
-  }
-  .project .overlay {
-    font-size: 24px;
-  }
-}
-
-.animateBar1 {
+  
+  .animateBar1 {
     animation: flipBar1 0.25s;
     animation-fill-mode: forwards;
-}
-.animateBar2 {
+  }
+  .animateBar2 {
     animation: fadeBar2 0.25s;
     animation-fill-mode: forwards;
-}
-.animateBar3{
+  }
+  .animateBar3 {
     animation: flipBar3 0.25s;
     animation-fill-mode: forwards;
-}
-
-@keyframes flipBar1 {
-    0% {
-        transform: rotate(0);
+  }
+  @keyframes flipBar1 {
+    from {
+      transform: rotate(0);
     }
-    100% {
-        transform: rotate(45deg) translate(4px,10px);
+    to {
+      transform: rotate(45deg) translate(4px, 10px);
     }
-}
-
-@keyframes fadeBar2 {
-    0% {
-        transform: scaleX(1);
-        opacity: 1;
+  }
+  
+  @keyframes fadeBar2 {
+    from {
+      transform: scaleX(1);
+      opacity: 1;
     }
-    100% {
-        transform: scaleX(0);
-        opacity: 0;
+    to {
+      transform: scaleX(0);
+      opacity: 0;
     }
-}
-
-
-@keyframes flipBar3 {
-    0% {
-        transform: rotate(0);
+  }
+  
+  @keyframes flipBar3 {
+    from {
+      transform: rotate(0);
     }
-    100% {
-        transform: rotate(-45deg) translate(4px,-10px); /* transfor origin also can work */
+    to {
+      transform: rotate(-45deg) translate(4px, -10px);  /* transform origin also can work */
     }
-}
+  }
+  
