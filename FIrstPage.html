@@ -580,14 +580,423 @@ Opacity and Transform are easiest for the page to animate.
     </ul>
     </div>
 
-    <h2>Media Queries</h2>
-    <p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Media_queries">Beginner's guide to media queries</a></p>
-    <p><b>Media queries</b> allow us to specify styles that are only applied at certain device screen widths. They are the lifeblood of developing finely-tuned responsive websites! <br><br>
-    <b>@media</b> initiates a media query, and allows us to follow up by specifying other important properties <br><br>
-    <b>only</b> is a keyword called a <i>logical operator</i> that prevents older browsers that don't support media queries from applying these styles. Otherwise, an older browser would apply these styles in general (and not just for the specified screen width)    
-    
+    <h2 style="color: rgb(118, 91, 219); font-size: 3rem;">Media Queries</h2>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Media_queries">Beginner's guide to media queries</a></li>
+        <li><b>Media queries</b> allow us to specify styles that are only applied at certain device screen widths. They are the lifeblood of developing finely-tuned responsive websites!</li>
+        <li><b>@media</b> initiates a media query, and allows us to follow up by specifying other important properties</li>
+        <li><b>only</b> is a keyword called a <i>logical operator</i> that prevents older browsers that don't support media queries from applying these styles. Otherwise, an older browser would apply these styles in general (and not just for the specified screen width)</li>
+        <li><b>screen</b> is the <i>media type</i> in this case. THere are other media types like <b>print</b> or <b>all</b>, but <b>screen</b> is what helps us write styles for different device screen sizes.</li>
+        <li><b>and</b> is another <i>logical operator</i> that helps us combine media features and/or media types together. In this case, we're combining a media type (<b>screen</b>) and a media feature (the <b>max-width</b>portion).</li>
+        <li>if you have conflicting media query styles the one that is lowest in order in the css file takes precidence</li>
+        <li><b>max-width</b> is actually just the <b>width</b> media feature with <b>max</b> added on. There are many other media features, which can also be modified by <i>min</i> and <i>max</i></li>
+        <li>THE SETUP FOR A MEDIA QUERY LOOKS SOMETHING LIKE THIS</li>
+        <ul>
+            <li style="font-weight: bold; font-family: Georgia, serif; color:orangered;"><i>@media</i> only screen and (max-width: '768px') { <br> <span style="margin-left: 50px; color:black;">put normal css code goes here</span> <br>}</li>
+        </ul>
+        <li>in the section above we see AND used. We can use other logical operators (or, not)</li>
+        <li><h3>Common Breakpoints in screen widths</h3></li>
+        <ul>
+            <li>Mobile Breakpoint: 0-480px</li>
+            <li>Tablet Breakpoint: 481-768px</li>
+            <li>Desktop (Small) Breakpoint: 769-1024px</li>
+            <li>Desktop (Large) Breakpoint: 1025px - up</li>
+            <li><b>NOTE:</b> THese breakpoints are a general rule of thumb, but in reality every unique layout and design requires attention to its own specific breakpoints. Test layouts thoroughly!</li>
+        </ul>
+    </ul>
 
-    </p>
+    <ul>
+        <li><h3>Layout Design Types</h3></li>
+        <li><b>Desktop-first</b> is a design/development approach in which you build a website to work on desktop, and then you'd make it responsive for smaller devices and screen sizes after.
+        <br>
+        In the earlier days of the web before mobile web browsing became widely accessible thanks to smary phones, most websites were not responsive.
+        <br>
+        As mobile usage grew, sites that were already optimized for desktop began to add mobile responsiveness.</li>
+        <br>
+        <li><b>Mobile-first</b> is a design philosophy that emphasizes designing/building the mobile experience for a website <i>first</i>, and then adding in layout customizations for larger viewport sizes <i>after</i>.
+        <br>As the internet matured and web traffic shifted to be more mobile-centric with the adoption of smart-phones, this philosophy grew in popularity. <br>Web designers and developers needed to ensure that the good experience for their websites carried over to smaller screens and devices other than desktop.</li>
+
+    </ul>
+
+
+    <h2 style="color: rgb(53, 153, 128); font-size: 3rem;">CSS Grid</h2>
+
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout">CSS Grid Layout</a></li>
+        <li>Grid is a <b>layout system</b> built into CSS!</li>
+        <ul>
+            <li>A collection of CSS properties used to manage layouts far easier than before</li>
+        </ul>
+        <li>A CSS Grid is primarily made up of a <b>Grid Container</b> with <b>Grid Items</b> inside of it.</li>
+        <ul>
+            <li><b>Grid Containers</b> are <i>parent</i> elements while <b>Grid Items</b> are <i>children</i> of the parent</li>
+        </ul>
+        <li>HOW IS IT DIFFERENT FROM FLEXBOX?</li>
+        <ul>
+            <li><b>Flexbox</b> = row OR column</li>
+            <li><b>Grid</b> = row AND column</li>
+        </ul>
+        <li>Grid Containers are just parent elements set to display either <b>grid</b> or <b>inline-grid</b></li>
+        <li>Containers can define columns and rows (or <b>Grid Tracks</b>) using <b>grid-template-columns</b> + <b>grid-template-rows</b></li>
+        <li><b>fr</b> stands for "<b>fraction</b>" - it represents an even proportion of the grid, which is useful <br> when we don't want to calculate <b>%</b> widths</li>
+        <li>Containers can use shorthand <b>grid-template</b>, which accepts <b>row values / column values</b> all in one!</li>
+        <br>
+        <li><b>minmax()</b> lets you define a minimum and a maximum value for the width a column should span or the height a row should span</li>
+        
+      
+        <ul>
+            <li>grid-template-columns: minmax(100px, 1fr);</li>
+        </ul>
+        
+        
+            <li style="color: black; background-color:rgb(241, 241, 91); width: 10%; padding: 15px; border-radius: 0 25px 25px 25px;">
+
+                .container {<br>
+                    display: grid; <br>
+                    grid-template-columns: 1fr 1fr; <br>
+                    grid-template-rows: 1fr 2fr 1fr 2fr;<br>
+                  }<br>
+            </li>
+        
+
+        <li><b>repeat()</b> lets you define many columns or rows with certain values with ease, instead of typing the same thing over and over</li>
+        <ul>
+            <li>grid-template-columns: repeat(4, 1fr);</li>
+            <li>COMBINATION</li>
+            <ul>
+                <li>grid-template-columns: repeat(5, minmax(100px, 250px));</li>
+            </ul>
+        </ul>
+        <li><b>fit-content()</b> tells a GRID TRACK to be as wide/tall as its content, but with a max value that it shouldn't exceed. <br>
+        It takes a bunch of different values, like <b>px</b>, <b>%</b> etc. as a max.</li>
+        <ul>
+            <li>grid-template-rows: fit-content(50px) 1fr 1fr</li>
+        </ul>
+        <li>Grid Containers come with gap styles to easily control the spacing between Grid Items, such as <b>column-gap</b> and <b>row-gap</b></li>
+        <ul>
+            <li style="color: chartreuse; background-color: black; width: 12%; padding: 15px; border-radius: 0 25px 25px 25px;">
+                display: grid; <br> grid-template: 1fr 1fr / repeat(4, 1ft); <br>column-gap: 20px; <br>row-gap: 30px;<br>OR USE grid-gap: 20px;</li>
+        </ul>
+        <li>Review module 227 for notes here. WORKING WITH GRIDLINES</li>
+        <li><h3>Positioning Grid Items</h3></li>
+        <li>Using <b>number</b> values, you can specify which <b>grid lines</b> the <b>Grid Item</b> should span. It will <i>start at the beginning</i> of the column/row <br>
+        you specify and <i>end right before</i> the column/row you specify</li>
+        <ul>
+            <li style="color: white; background-color: grey; width: 7%; padding: 15px; border-radius: 0 25px 25px 25px;">
+            .container .item {<br>
+            grid-column-start: 1;<br>
+            grid-column-end: 3;<br>
+            grid-row-start: 1 <br>
+            grid-row-end: 2; <br>
+            }</li>
+        </ul>
+        <li>Using <b>span</b>, you can specify how many columns/rows a <b>Grid Item</b> should span. Note: by default it starts in the first column/row, and the number refers to <b>grid tracks</b>, not grid lines.</li>
+        <ul>
+            <li style="font-weight: bold; color: maroon; border: 2px solid black; width: 9%; padding: 15px; border-radius: 0 25px 25px 25px;">
+            .container .item {<br>
+            grid-column-start: 1;<br>
+            grid-column-end: span 2;<br>
+            grid-row-start: 1 <br>
+            grid-row-end: span 2; <br>
+            }</li>
+        </ul>
+        <li>You can use <b>grid-column</b> & <b>grid-row</b> as a shorthand. It takes a <b>start value / end value</b>.</li>
+        <ul>
+            <li style="color: black; background-color:burlywood; border: 2px solid darkblue; width: 7%; padding: 15px; border-radius: 0 25px 25px 25px;">
+            .container .item {<br>
+            grid-column: 1 / 3;<br>
+            grid-row: 1 / 3<br>
+            }</li>
+        </ul>
+        <li>You can also <b>name your lines</b> in a <b>Grid Container</b>! This can be helpful later when we position <b>Grid Items</b>, since we <br>can specify which line they start at and which they end at (more on that soon).</li>
+        <ul>
+            <li style="color: rgb(74, 0, 134); border: 2px dashed rgb(137, 167, 30); background-color: whitesmoke; width: 35%; padding: 15px; border-radius: 0 25px 25px 25px;">
+            .container {<br>
+            display: grid;<br>
+            grid-template-columns: [col1-start] 1fr [col1-end col2-start] 1fr [col2-end col3-start] 1fr [col3-end];<br>
+            grid-template-rows: [row1-start] 1fr [row1-end row2-start] 1fr [row2-end]; <br>
+            }</li>
+        </ul>
+        <li>Using <b>name</b> values, you can specify what <b>grid lines</b> the <b>Grid Item</b> should span.</li>
+        <ul>
+            <li style="font-weight: bold; color: white; background-color:rgb(173, 105, 15); width: 10%; padding: 15px; border-radius: 0 25px 25px 25px;">
+            .container .item {<br>
+            grid-column-start: col1-start;<br>
+            grid-column-end: col2-end;<br>
+            grid-row-start: row1-start;<br>
+            grid-row-end: row2-end;
+            }</li>
+        </ul>
+        <li style="list-style: none;"><h3 style="font-size: 1.5rem; color: blue;">grid-template-areas:</h3></li>
+        <li>You can use <b>grid-template-areas</b> as a shorthand way to setup a grid in a <b>really visually-friendly way</b>. Visualize the items in the grid in code an voila!</li>
+        <ul>
+            <li style="color: darkgreen; background-color:lightgreen; width: 10%; padding: 15px; border-radius: 0 25px 25px 25px;">
+            .container {<br>
+            grid-template-areas:<br>
+                "a a c"<br>
+                "b b c";<br>
+            }</li>
+            <li>Next, simply name your <b>grid items</b> by matching their <b>grid-area</b> name, and watch as they get positioned exactly where you specified!</li>
+            <ul>
+                <li style="color: darkgreen; background-color:lightgreen; width: 10%; padding: 15px; border-radius: 0 25px 25px 25px;">
+                .container .item1 {<br>
+                grid-area: a;<br>
+                }<br><br>
+                .container .item2 {<br>
+                    grid-area: b;<br>
+                }<br><br>
+                .container .item3 {<br>
+                    grid-area: c;<br>
+                }<br><br>
+                </li>
+            </ul>
+        </ul>
+        <li><h4>Using Grid-Template-Areas with Rows and Columns</h4></li>
+        <ul>
+            <li style="color: rgb(100, 0, 0); background-color:rgb(209, 245, 252); width: 15%; padding: 15px; border-radius: 0 25px 25px 25px;">
+            <b>.container</b> {<br>
+                height: 700px;<br>
+                width: 700px;<br>
+                margin: 200px auto;<br>
+                background-color: black;<br>
+                box-shadow: 0 6px 20px rgba(227, 183, 183, 0.2);<br>
+                display: grid;<br>
+                grid-template-columns: 1fr 1fr 150px;<br>
+                grid-template-rows: 100px 1fr 100px;<br>
+                grid-template-areas:<br>
+                  "navbar navbar navbar"<br>
+                  "main main sidebar"<br>
+                  "footer footer footer";<br>
+              }<br><br>
+              
+              <b>.box</b> {<br>
+                color: white;<br>
+                font-size: 1.5rem;<br>
+                text-align: center;<br>
+              }<br>
+              <b>.first</b> {<br>
+                grid-area: navbar;<br>
+              }<br><br>
+              
+              <b>.second</b> {<br>
+                grid-area: main;<br>
+              }<br><br>
+              <b>.third</b> {<br>
+                grid-area: sidebar;<br>
+              }<br><br>
+              
+              .fourth {<br>
+                grid-area: footer;<br>
+              }
+              
+            </li>
+        </ul><br>
+        <li> You can use <b>grid-auto-flow</b> to tell the grid how/where to add new items in the grid. It defaults to <b>row</b>.</li>
+        <ul>
+            <li style="color: black; background-color: wheat; width: 10%; padding: 9px; border: 3px tomato dotted; border-radius: 0 25px 25px 25px;">
+            .container {<br>
+            display: grid;<br>
+            grid-auto-flow: <b>row</b>;<br>
+            }
+            </li>
+        </ul><br>
+        <li>You can use <b>grid-auto-flow</b> to tell the grid to add new items to fill up each <b>column</b> first instead</li>
+        <ul>
+            <li style="color: black; background-color: wheat; width: 10%; padding: 9px; border: 3px tomato dotted; border-radius: 0 25px 25px 25px;">
+            .container {<br>
+            display: grid;<br>
+            grid-auto-flow: <b>column</b>;<br>
+            }
+            </li>
+        </ul><br>
+        <li>Adding the <b>dense</b> keyword after <b>row</b> or <b>column</b> tells the grid to pack in the space with the next available item that would fit, in order.<br>Yes column dense is also a thing</li>
+        <ul>
+            <li style="color: black; background-color: wheat; width: 10%; padding: 9px; border: 3px tomato dotted; border-radius: 0 25px 25px 25px;">
+            .container {<br>
+            display: grid;<br>
+            grid-auto-flow: <b>row dense</b>;<br>
+            }
+            </li>
+        </ul><br>
+        <li>When <b>grid-auto-flow:</b> is set to rows or columns and you have more <b>.items</b> than you've alotted space for in the grid then handle overflow with <br>
+        <span style="text-decoration: underline; color:rgb(40, 197, 48); font-weight: bold;">grid-auto-rows: 200px;</span> <br> or <br><span style="font-weight: bold; text-decoration: underline; color:rgb(25, 112, 79)">grid-auto-columns: 200px;</span> </li>
+    <li><h3 style="font-size: 1.5rem; color: firebrick;">auto-fill and auto-fit</h3></li>
+        <ul>
+            <li><h2>AUTO-FILL and AUTO-FIT are SUPER USEFUL!</h2></li>
+            <li>Auto-placement keywords, like <b>auto-fill</b> + <b>auto-fit</b>, can be used to let the browser <br> take care of the responsiveness of the grid and the wrapping of <br>columns into new rows when needed.</li>
+            <li><b>auto-fill</b> and <b>auto-fit</b> can be used as the first argument in the <b>repeat()</b> method</li>
+                <li style="color: rgb(92, 91, 89); background-color: rgb(232, 246, 247); width: 25%; padding: 12px; border: 1px black solid; border-radius: 0 25px 25px 25px;">
+                .container {<br>
+                display: grid;<br>
+                grid-template-columns: repeat(auro-fit, minmax(100px, 1fr));<br>
+                }
+                </li>
+            <br>
+        
+        </ul>
+    
+    </ul>
+
+    <h2 style="color: blueviolet;">Keyframes Animations</h2>
+    <ul>
+        <li>CSS animations come in two formes</li>
+        <ol>
+            <li>Transitions (learned this earlier)</li>
+            <li>Keyframes Animations</li>
+        </ol>
+        <li style="font-weight: bold;">Define the animation:</li>
+        <li style="color: rgb(92, 91, 89); background-color: rgb(232, 246, 247); width: 15%; padding: 12px; border: 1px black solid; border-radius: 0 25px 25px 25px;">@keyframes spin {<br>....from {<br>........transform: rotate(0turn);<br>....} <br>....to { <br>........transform: rotate(1turn); <br>....} <br>}</li>
+        <li style="font-weight: bold; color: rgb(241, 54, 21);">APPLY the animation</li>
+        <li style="color: rgb(92, 91, 89); background-color: rgb(232, 247, 239); width: 15%; padding: 12px; border: 1px black solid; border-radius: 0 25px 25px 25px;">animation-name: spin; <br>animation-duration: 2s;<br>animation-iteration-count: infinite;<br>animation-direction: alternate;<br>animation-delay: 1s;<br> animation-timing-function: ease-out;</animation-timing-function></li>
+        <li> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">Using CSS Animations</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes">MDN Keyframes</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation">Animation Shorthand</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode">The Animation Fill Mode Property - making the states of your animation persist</a></li>
+    </ul>
+
+    <h2 style="text-decoration: underline; color: darkgreen;">::before & ::after Pseudo-Elements</h2>
+    <ul>
+        <li>We can use the ::before and ::after pseudo-elements to insert content onto a page via CSS without it needing to be in the HTML</li>
+        <li>Commonly used only for <i>DECORATION</i>. In CSS</li>
+        <li style="color: black; background-color: wheat; width: 10%; padding: 9px; border: 3px tomato solid; border-radius: 0 25px 25px 25px;">
+            <b>blockquote::before</b> {<br>
+            content: open-quote;<br>
+            }
+            </li>
+        <li style="font-size: 24px; color: navy; font-weight: bold;">Fancy animated button</li>
+        <li style="color: black; background-color: rgb(185, 238, 190); width: 13%; padding: 12px; border: 1px black solid; border-radius: 0 25px 25px 25px;">
+        <b>.button</b> {<br>
+            padding: 20px 40px;<br>
+            text-transform: uppercase; <br>
+            border: 2px solid #E91E63;<br>
+            color: #E91E63;<br>
+            text-decoration: none;<br>
+            border-radius: 25px;<br> 
+            Position: relative;<br>
+            overflow: hidden; <br>
+            transition: color  0.25s ease;<br>
+        } <br><br>
+        <b>.button::before</b> { <br>
+        content: "";<br>
+        width: 100%;<br>
+        height: 100%;<br>
+        background-color:#E91E63;<br>
+        position: absolute;<br>
+        top: 0;<br>
+        left: 0;<br>
+        transform: translateX(-100%);<br>
+        transition: transform 0.25s ease;<br>
+        z-index: -1; <br>
+    } <br><br>
+    <b>.button:hover</b> {<br>
+    color:white;<br>
+    } 
+    <br><br>
+    <b>.button:hover::before</b> {<br>
+        transform: translateX(0%);<br>
+
+        } <br>
+    <br>
+   </li>
+
+   <li style="font-size: 24px; color: navy; font-weight: bold;">Colorful Spinner</li>
+        <li style="color: black; background-color: rgb(185, 238, 190); width: 13%; padding: 12px; border: 1px black solid; border-radius: 0 25px 25px 25px;">
+        <b>.spinner</b> {<br>
+            width: 300px;<br>
+            height: 300px; <br>
+            border-radius: 50%; <br>
+            background: conic-gradient(cyan, yellow, magenta, cyan); <br>    
+            border: 4px solid white;<br>
+            box-shadow: inset 0px 0px 110px -70px black; <br>
+            position: relative; <br>
+            animation: spin 1.5s linear infinite; <br>
+        } <br><br>
+        <b>.spinner::after</b> { <br>
+        content: "";<br>
+        background-color: white;<br>
+        width: 80%;<br>
+        height: 80%;<br>
+        border-radius: 50%; <br>
+        position: absolute;<br>
+        top: 50%;<br>
+        left: 50%;<br>
+        transform: translate(-50%, -50%);<br>
+        box-shadow: inset 0px 0px 110px -70px black; <br>
+        border: 4px solid white; <br>
+    } <br><br>
+    <b>@keyframes spin</b> {<br>
+    ......from {<br>
+    .........transform: rotate(0);<br>
+    .........} <br>
+    ......to {<br>
+        .........transform: rotate(360);<br>
+        .........} <br> 
+    } 
+    <br><br>
+    <b>.button:hover::before</b> {<br>
+        transform: translateX(0%);<br>
+
+        } <br>
+    <br>
+   </li><br>
+
+
+   <li style="font-size: 24px; color: navy; font-weight: bold;">Custom Form Controls - COOL TOGGLE!</li>
+        <li style="color: black; background-color: rgb(185, 238, 190); width: 13%; padding: 12px; border: 1px black solid; border-radius: 0 25px 25px 25px;">
+        body {<br>
+        display: flex;<br>
+        justify-content: center;<br>
+        align-items: center;<br>
+        height: 100vh;<br>
+        font-family: sans-serif;<br>
+      }<br><br>
+      
+      *toggle is an input type=checkbox* <br><br>
+      .toggle { <br>
+        opacity: 0;<br>
+      }<br>
+      <br>
+      *label is below the input in the HTML
+      <br><br>
+      .toggle + label {<br>
+        position: relative;<br>
+        padding-left: 5rem;<br>
+      }<br><br>
+      .toggle + label::before {<br>
+        content: "";<br>
+        background-color: #c6d0cc;<br>
+        position: absolute;<br>
+        top: 0;<br>
+        left: 0;<br>
+        width: 4.5rem;<br>
+        height: 2.5rem;<br>
+        border-radius: 1.25rem;<br>
+        transition: background-color 0.2s;<br>
+      }<br><br>
+      
+      .toggle + label::after {<br>
+        content: "";<br>
+        width: 2rem;<br>
+        height: 2rem;<br>
+        border-radius: 50%;<br>
+        background-color: white;<br>
+        position: absolute;<br>
+        top: 0.25rem;<br>
+        left: 0.25rem;<br>
+        transition: transform 0.2s;<br>
+      }<br><br>
+      
+      .toggle:checked + label::before {<br>
+        background-color: #20b776;<br>
+      }<br>
+      
+      .toggle:checked + label::after {<br>
+        transform: translateX(2rem);<br>
+      }<br>
+      
+   </li>
+
+    </ul>
 
 </body>
 </html>
