@@ -175,3 +175,17 @@ p {
     opacity: 0.75;
     cursor: pointer;
 }
+
+.with-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.with-icon > img { /* the direct decendent image */
+    transition: transform 0.25s ease;
+}
+
+.with-icon:hover > img {  /* the direct decendent image */
+    transform: translateX(4px);
+}
