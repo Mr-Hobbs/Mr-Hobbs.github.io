@@ -45,10 +45,10 @@ body {
     width: 100%; /* make it full width, resetting things*/
     margin: 0; /* again, resetting things, starting from zero*/
     box-sizing: border-box; /* border-box means width and heigt will INCLUDE padding */
-    padding: var(--spacing-sm);
+    padding: var(--spacing-sm) 0 0 0;
     background-color: var(--purple-1);
+    display: flex;  /* before putting this in, our navbar went all the way to the left of the screen. so we added this to the element (in this case the body) the navbar class is in*/
     flex-direction: column; /* before putting this in our navbar went all the way to the left of the screen. so we added this to the element (in this case the body) the navbar class is in*/
-    display: flex;  /* before putting this in our navbar went all the way to the left of the screen. so we added this to the element (in this case the body) the navbar class is in*/
     justify-content: center; /* before putting this in our navbar went all the way to the left of the screen. so we added this to the element (in this case the body) the navbar class is in*/
     align-items: center; /* before putting this in our navbar went all the way to the left of the screen. so we added this to the element (in this case the body) the navbar class is in*/
 }
@@ -69,7 +69,7 @@ h2 {
     font-size: var(--h2-size);
     margin: 0; /* remove default margins */
     width: 100%;
-    letter-spacing: -0.2px;
+    letter-spacing: -0.25px;
     line-height: var(--h2-height);
 }
 
@@ -242,7 +242,7 @@ p {
     display: flex;
     width: 100%;
     max-width: var(--standard-width); /*1144px*, having a max-width limits how wide it can be*/
-    justify-content: space-between; /*centering the menu that is full of links*/
+    justify-content: space-between; /*aligning the navbar so everything is spread out well*/
     align-items: center;     /*centering the menu that is full of links*/
     padding: 0 var(--spacing-md); /*16px*/
 }
@@ -280,5 +280,30 @@ p {
 }*/
 
 
-/* HERO CONTENT */
+/* HERO STYLES */
+main {
+    margin: var(--spacing-xl) 0; /* visually this pushed the h1 away from the navbar*/
+}
+.button-container   {
+    display: flex;
+    margin: var(--spacing-md) 0;
+}
 
+.button-container button:nth-of-type(2) {/* this says "the second button in that container*/
+    margin: 0 0 0 var(--spacing-md);
+    color: var(--purple-2);
+}
+
+.hero p {
+    max-width: 480px;
+}
+
+.hero .hero-phone-container { /* need to specify that this is in the .hero*/
+    height: 564px;
+    align-items: flex-end;
+}
+
+.hero-phone { /* this is for the phone image itself */
+    height: 628px; /* this is 64px taller than .hero .hero-phone-container - we want it to extend a little bit*/
+    transform: translate(42px, -32px);
+}
