@@ -440,3 +440,21 @@ main {
     max-width: 470px;
     border-radius: 20px;
 }
+
+
+/* WHY SWIPE COMMENT SECTION*/
+.why-swipe-section .card-container {
+    display: flex;
+    margin: var(--spacing-lg) 0;
+}
+
+.why-swipe-section .card-container .card{
+    width: 25%;
+    padding: 0 var(--spacing-sm) 0 0;
+    margin:  0 var(--spacing-sm) 0 0;
+    box-sizing: border-box; /*include the padding in the percent width*/
+}
+
+.why-swipe-section .secondary-text {
+    color: var(--text-dark); /* overwriting the original color we chose for the secondary text class*/
+}
