@@ -417,17 +417,19 @@ main {
     background-color: var(--bg-white);
 }
 
-.integrations-section .secondary-button {
-    color: var(--blue-1);
-    margin: var(--spacing-md) 0 0 0;
-}
 
 .integrations-section .card-container {
     display: flex;
+    margin: var(--spacing-lg) 0;
 }
 
 .integrations-section .card-container .card {
     width: 50%;
+}
+
+.integrations-section .secondary-button {
+    color: var(--blue-1);
+    margin: var(--spacing-md) 0 0 0;
 }
 
 #api-code {
