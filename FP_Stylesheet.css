@@ -417,7 +417,6 @@ main {
     background-color: var(--bg-white);
 }
 
-
 .integrations-section .card-container {
     display: flex;
     margin: var(--spacing-lg) 0;
@@ -430,6 +429,11 @@ main {
 .integrations-section .secondary-button {
     color: var(--blue-1);
     margin: var(--spacing-md) 0 0 0;
+}
+
+.integrations-section .card-container .card img{
+    height: 50px;
+    width: 50px;
 }
 
 #api-code {
@@ -459,4 +463,9 @@ main {
 
 .why-swipe-section .secondary-text {
     color: var(--text-dark); /* overwriting the original color we chose for the secondary text class*/
+}
+
+.why-swipe-section .card-container img {
+    height: 50px;
+    width: 50px;
 }
