@@ -605,7 +605,7 @@ main {
     height: 150%; /**/
     position: absolute; /* allows you to put it exactly where you want*/
     top: -40%; /*moves it up a little bit*/
-    transform: skewY(-5deg); /* warps/stretches the thing*/
+    transform: skewY(-5deg); /* warps/stretches the background but not the pictury elements*/
     z-index: 1;
 }
 
@@ -647,4 +647,41 @@ main {
     color: var(--text-dark);
     width: 50%;
     font-weight: 700;
+}
+
+/* GETTING STARTED SECTION */
+.getting-started-container {
+    display: flex; /* enable flexbox */
+    justify-content: center;
+    padding: var(--spacing-xl) 0;
+}
+
+.getting-started-container .primary-button {
+    background-color: var(--purple-1);
+    margin: var(--spacing-md) 0;
+}
+
+.getting-started-container .primary-button:hover {
+    background-color: var(--primary-accent);
+}
+
+.getting-started-container .col-right {
+    flex-direction: row;
+
+}
+
+.getting-started-container .col-left {
+    padding: 0 var(--spacing-xl) 0 0;
+}
+
+.getting-started-container .col-right .card {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 var(--spacing-sm) 0 0;
+    margin:  0 var(--spacing-md) 0 0;
+}
+
+.getting-started-container .col-right .card .secondary-button {
+    color: var(--purple-2);
+    padding-left: 0;
 }
