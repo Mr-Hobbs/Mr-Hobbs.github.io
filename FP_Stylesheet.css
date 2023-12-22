@@ -61,10 +61,7 @@ body {
     align-items: center; /* before putting this in our navbar went all the way to the left of the screen. so we added this to the element (in this case the body) the navbar class is in*/
 }
 
-main {
-    width: 100%; /* allows backgrounds of decendent elements to go full screen. but it moves everything to the left of the screen */
-/* the solution is to introduce flexbox to all the sections*/
-}
+
 
 h1 {
     font-family: var(--heading-font);
@@ -315,7 +312,9 @@ p {
 
 /* HERO STYLES */
 main {
-    margin: var(--spacing-xl) 0; /* visually this pushed the h1 away from the navbar*/
+    margin: var(--spacing-xl) 0 0 0; /* visually this pushed the h1 away from the navbar*/
+    width: 100%; /* allows backgrounds of decendent elements to go full screen. but it moves everything to the left of the screen */
+    /* the solution is to introduce flexbox to all the sections*/
 }
 
 .hero { /* bringing it back to center */
@@ -438,10 +437,25 @@ main {
 /* INTEGRATION SECTION STYLES */
 .integrations-section {
     color: var(--text-light);
-    background-color: var(--primary-accent);
+    /*background-color: var(--primary-accent);*/
     width: 100%;
     display: flex;
     justify-content: center;
+    position: relative;
+    padding: calc(var(--spacing-xl) *3) 0; /*adding a lot of vertical padding*/
+    z-index: 1; /*giving this any positive z-index number will move it in front of elements that don't have a z-index number*/
+}
+
+.integrations-section::before { /* can also use ::after for the same effect. it doesn't matter. This is the angled background stripe*/
+    content: ""; /*<-- this makes it an empty in-line element*/
+    width: 100%; /* <-- make it super wide*/
+    height: 1100px; /* got this number by messing around with what works*/
+    background-color: var(--primary-accent);
+    position: absolute; /*this is based on the nearest positioned ancestor*/
+    top: -32px; /*moving it )the background stripe) around*/
+    left: 0; /*moving it around*/
+    z-index: -1; /* move the stripe behind the integration-section*/
+    transform: skewY(-10deg);
 }
 
 .integrations-section .primary-button {
@@ -491,6 +505,7 @@ main {
     width: 100%;
     display: flex;
     justify-content: center;
+    padding: calc(var(--spacing-xl) *3) 0;
 }
 
 .why-swipe-section .card-container {
@@ -684,4 +699,62 @@ main {
 .getting-started-container .col-right .card .secondary-button {
     color: var(--purple-2);
     padding-left: 0;
+}
+
+/*use flexbox so your stuff can be centered (margin auto also works but flexbox can be better/preferred */
+
+/* FOOTER STYLES */
+
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg-light);
+    padding: var(--spacing-xl) 0;
+}
+
+#footer-logo {
+    max-width: 108px;
+    margin: 0 0 var(--spacing-md) 0;
+}
+.footer .col {
+    width: 25%;
+}
+
+.footer .section-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer .col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer .col ul li {
+    margin: var(--spacing-md) 0;
+}
+
+.footer .col a {
+    color: var(--text-dark);
+    font-weight: normal;
+}
+
+.footer .col a:hover {
+    color: var(--purple-1);
+    text-decoration: underline;
+}
+
+.footer .icon-link { /*center the icons vertically with our text*/
+    display: flex;
+    align-items: center;
+    margin: var(--spacing-md) 0;
+}
+
+.footer .icon-link img {
+    width: 24px; /*resize the icons*/
+} 
+
+.footer h3 {
+    font-size: var(--h6-size);
+    font-weight: 700;
 }
