@@ -275,6 +275,7 @@ p {
     justify-content: space-between; /*aligning the navbar so everything is spread out well*/
     align-items: center;     /*centering the menu that is full of links*/
     padding: 0 var(--spacing-md); /*16px*/
+    margin: 0 0 var(--spacing-xl) 0;
 }
 
 .menu {
@@ -309,6 +310,22 @@ p {
     color: var(--primary-accent);
 }*/
 
+/* ANMIATED GRADIENT */
+
+#gradient-canvas {
+    /*background-color: purple;*/
+    width: 200%;
+    height: 970px;
+    transform: rotate(-10deg);
+    position: absolute;
+    top: -600px; /* move that thing up up */
+    left: -50%;
+    z-index: -1;
+    --gradient-color-1: #ef008f; /*  these NEED to be hex codes */
+    --gradient-color-2: #6ec3f4;
+    --gradient-color-3: #7038ff;
+    --gradient-color-4: #ffba27;
+}
 
 /* HERO STYLES */
 main {
@@ -374,6 +391,7 @@ main {
     width: 100%;
     display: flex;
     justify-content: center;
+    background-color: var(--bg-light);
 }
 
 .unified-platform-section .primary-button {
@@ -395,6 +413,7 @@ main {
     width: 100%;
     display: flex;
     justify-content: center;
+    background-color: var(--bg-light);
 }
 
 .graphic-grid {
@@ -452,11 +471,22 @@ main {
     height: 1100px; /* got this number by messing around with what works*/
     background-color: var(--primary-accent);
     position: absolute; /*this is based on the nearest positioned ancestor*/
-    top: -32px; /*moving it )the background stripe) around*/
+    top: -32px; /*moving it (the background stripe) around*/
     left: 0; /*moving it around*/
     z-index: -1; /* move the stripe behind the integration-section*/
     transform: skewY(-10deg);
 }
+
+.integrations-section::after { /*this covers the small white triangle on the left near the graphics section*/
+    content: "";
+    background-color: var(--bg-light);
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+ }
 
 .integrations-section .primary-button {
     background-color: var(--blue-1);
@@ -531,14 +561,27 @@ main {
 
 /* GLOBAL SECTION */
 .global-section {
-    background-color: var(--primary-accent);
+    /*background-color: var(--primary-accent);*/ /* removing the blue background color so only the separate strip just shows */
     width: 100%;
     display: flex;
     justify-content: center;
     color: var(--text-light);
-    position: relative;
-    padding: calc(var(--spacing-xl) * 3) 0;
+    position: relative; /* happy to have this positioned already since the ::before/::after works better with it*/
+    padding: calc(var(--spacing-xl) * 3) 0 0 0; /* removed the lower padding so the swipe section ::before background comes up to cover the bottom of the blue stripe of the Global section */
 }
+
+.global-section::before {
+    content: "";
+    width: 100%;
+    height: 1200px;
+    background-color: var(--primary-accent);
+    position: absolute; /* positioned on the closest ancestor that also has positioning*/
+    top: -32px; /* moving it up a little -*/
+    left: 0;
+    transform: skewY(-10deg);/* this is the thing that angles the background */
+    z-index: -1; /* putting it behind the other things*/
+}
+
 
 .global-section a {
     color: var(--blue-1);
@@ -573,11 +616,24 @@ main {
     top: 10%; /* moving the globe 10% from the top of it's parent element*/
 }
 
+
+
 /* VIRTUAL EVENTS SECTION */
 .virtual-events-section {
     display: flex;
     justify-content: center;
     padding: calc(var(--spacing-xl) * 2) 0;
+    position: relative;
+}
+
+.virtual-events-section::before {
+    content: "";
+    background-color: var(--bg-white);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
 }
 
 .virtual-events-section .primary-button {
