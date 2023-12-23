@@ -3,6 +3,7 @@ body {
     padding: 0;
     font-family: 'Forum', serif;
     position: absolute; /*added by Spencer to try and resolve elements not spannig width in Chrom on mobile*/
+    width: 100vw;
 }
 .hero {
     background-color: #f08e80;
