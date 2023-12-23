@@ -59,7 +59,7 @@ body {
     flex-direction: column; /* before putting this in our navbar went all the way to the left of the screen. so we added this to the element (in this case the body) the navbar class is in*/
     justify-content: center; /* before putting this in our navbar went all the way to the left of the screen. so we added this to the element (in this case the body) the navbar class is in*/
     align-items: center; /* before putting this in our navbar went all the way to the left of the screen. so we added this to the element (in this case the body) the navbar class is in*/
-    position: absolute; /*added by Spencer to try and resolve elements not spannig width in Chrom on mobile*/
+
 }
 
 
@@ -814,4 +814,51 @@ main {
 .footer h3 {
     font-size: var(--h6-size);
     font-weight: 700;
+}
+
+
+/* 1144px width and below */
+@media only screen and (max-width: 1144px) {
+    .section-container {
+        padding: 0 var(--spacing-md);
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .partners-grid img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* TABLET SIZE */
+@media only screen and (max-width: 768px) {
+    :root {
+        --h1-size: 64px;
+        --h1-height: 72px;
+        /*--h2-size:  72px;*/ /*unused*/
+        /*--h2-height: ;*/
+        --h3-size: 34px;
+        /*--h4-size: ;
+        --h5-size: ;
+        --h6-size: ;*/
+    }
+    .partners-grid { /* adjusting the logos layout */
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    .section-container {
+        padding: 0 var(--spacing-md);
+        border: 2px solid red;
+        width: 100%;
+    }
+}
+
+
+/* MOBILE SIZE */
+@media only screen and (max-width: 550px) {
+    body {
+        position: absolute; /*added by Spencer to try and resolve elements not spannig width in Chrom on mobile*/
+        width: 100vw;
+    }
 }
