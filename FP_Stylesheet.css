@@ -59,6 +59,7 @@ body {
     flex-direction: column; /* before putting this in our navbar went all the way to the left of the screen. so we added this to the element (in this case the body) the navbar class is in*/
     justify-content: center; /* before putting this in our navbar went all the way to the left of the screen. so we added this to the element (in this case the body) the navbar class is in*/
     align-items: center; /* before putting this in our navbar went all the way to the left of the screen. so we added this to the element (in this case the body) the navbar class is in*/
+    position: absolute; /*added by Spencer to try and resolve elements not spannig width in Chrom on mobile*/
 }
 
 
