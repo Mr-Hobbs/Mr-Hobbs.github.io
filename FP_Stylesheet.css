@@ -862,3 +862,11 @@ main {
         width: 100vw;
     }
 }
+
+/* Spencer MOBILE SIZE */
+@media only screen and (max-width: 375px) {
+    body {
+        position: absolute; /*added by Spencer to try and resolve elements not spannig width in Chrom on mobile*/
+        width: 100vw;
+    }
+}
