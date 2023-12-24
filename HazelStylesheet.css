@@ -186,7 +186,7 @@ body {
   }
 
   @media only screen and (max-width: 420px){
-    .hero{background-color: white;
+    .hero{
     color: black;
     }
   }
