@@ -875,7 +875,21 @@ main {
     .global-section .card-container .card {
         width: 50%;
     }
+       
+    /* GETTING STARTED SECTION */
 
+    .getting-started-container .two-column {
+        align-items: center;
+    }
+
+    .getting-started-container .col-right {
+        flex-wrap: wrap; /* important */
+    }
+       
+    .getting-started-container .col-right .card {
+    width: 100%;
+    margin: var(--spacing-md) 0;
+    }
 }
 
 
@@ -932,6 +946,7 @@ main {
         width: 100%;
         margin: var(--spacing-lg) 0;
     }
+
     .virtual-events-section .swipe-sessions-card .secondary-text {
         width: 100%;
     }
@@ -943,12 +958,30 @@ main {
     #sessions-logo {
         width: 300px;
     }
+
+    .footer {
+        flex-wrap: wrap; /* turning on wrap allows the width 50% below to work properly */
+    }
+    .footer .col {
+        width: 50%;
+        margin: var(--spacing-md) 0;
+    }
+
+    .footer .col a {
+        font-size: 12px;
+    }
+    #footer-logo {
+        width: 70px;/*shrink logo size*/
+    }
+    .footer .icon-link img {
+        width: 18px;
+    }
 }
 
 
 
 html,body {
-   width: 100%; 
+   width: 100%; /* use this part if mobile views do not reach across the page */
    position: relative;
    overflow-x: hidden;
 
