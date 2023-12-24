@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="G:/Udemy/Udemy HTML/Final_Project/FP_Stylesheet.css"> -->
-    <link rel="stylesheet" href="FP_Stylesheet.css"> 
+    <link rel="stylesheet" href="G:/Udemy/Udemy HTML/Final_Project/FP_Stylesheet.css">
+    <!-- <link rel="stylesheet" href="FP_Stylesheet.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -22,19 +22,27 @@
         </ul>
 
         <div class="hamburger-button">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
         </div>
-        
+
         <button class="primary-button navbar-button">Sign in</button>
  
     </nav>
-    
+
+<!--    <nav class="mobileNav">
+        <a href="https://en.wikipedia.org/wiki/Product">Products</a>
+        <a href="https://en.wikipedia.org/wiki/Solution_(chemistry)">Solutions</a>
+        <a href="https://developer.mozilla.org/en-US/">Developers</a>
+        <a href="https://developer.mozilla.org/en-US/">Resources</a>
+        <a href="https://goldprice.org/">Pricing</a>
+    </nav>-->
+
 <main>
 <!-- GRADIENT BACKGROUND -->
-    <canvas id="gradient-canvas"></canvas> <!--making this line makes the canvas selectable/styleable in CSS-->
-    
+    <canvas id="gradient-canvas"></canvas> <!--making this line makes it selectable/styleable in CSS-->
+
 <!-- HERO SECTION -->
     <div class="hero">
         <div class="section-container two-column">
@@ -48,7 +56,7 @@
                 <div class="button-container"> <!--This makes poitioning (and styling?) the buttons easier-->
                     <button class="primary-button with-icon">
                         Start now
-                        <img src="./arrow-right-light.svg" alt="">
+                        <img src="./assets/arrow-right-light.svg" alt="">
                     </button>
                     <button class="secondary-button with-icon">
                         Contact sales
@@ -74,7 +82,7 @@
                 <img src="./assets/shopify.png" alt="Shopify">
                 <img src="./assets/google.png" alt="Google">
                 <img src="./assets/lyft.png" alt="Lyft">
-                <img src="./assets/zoom.png" alt="Zoom">
+                <img src="./assets/Zoom.png" alt="Zoom">
 
             </div>
         </div>
@@ -105,7 +113,7 @@
             Start now
             <img src="./assets/arrow-right-light.svg" alt="">
         </button>
-
+           
       </div>
     </div>
 
@@ -122,7 +130,7 @@
 
     </div>
 
-    <!--INTEGRATOIN SECTION-->
+    <!--INTEGRATIONS SECTION-->
     <div class="integrations-section"><!--allows us to style this section easily-->
         <div class="section-container two-column">
             <div class="col-left">
@@ -141,7 +149,7 @@
                 
                 <div class="card-container">
                     <div class="card">
-                        <img src="./assets/tools-icon.png" alt="">
+                        <img src="./assets/tools-icon.png" alt="tools-icon">
                         <h3>Tools for all stacks</h3>
                         <p class="secondary-text">We offer front end and back end libraries in some of the most widely used technologies, old and new.</p>
                         <button class="secondary-button with-icon">
@@ -151,7 +159,7 @@
                     </div>
 
                     <div class="card">
-                        <img src="./assets/cube-icon.png" alt="">
+                        <img src="./assets/cube-icon.png" alt="cube-icon">
                         <h3>Custom integrations</h3>
                         <p class="secondary-text">Use integrations for systems like Shopify, WooCommerce, NetSuite, and more.</p>
                         <button class="secondary-button with-icon">
@@ -159,7 +167,9 @@
                             <img src="./assets/arrow-right-blue.svg" alt="">
                         </button>
                     </div>
+
                 </div>
+
             </div>
 
             <div class="col-right">
@@ -169,6 +179,7 @@
             </div>
         </div>
     </div>
+
 
     <!--WHY SWIPE SECTION-->
     <div class="why-swipe-section"> <!-- allows us to specifically style this section easily-->
@@ -294,7 +305,6 @@
         </div>
     </div>
 
-
     <!--GETTING STARTED SECTION-->
     <div class="getting-started-container">
         <div class="section-container two-column">
@@ -382,12 +392,15 @@
                     <li><a href="https://collegewares.com/products/identity-theft-is-not-a-joke">Cookie Settings</a></li>
                 </ul>
             </div>
+
         </div>
     </footer>
 
 
 </main>
 
-   <script src="gradient.js"></script> <!--links JS to HTML. done at the bottom of the body-->
+    <script src="gradient.js"></script> <!--links JS to HTML. done at the bottom of the body-->
+    <script src="Grid_index.js"></script>
+
 </body>
 </html>
