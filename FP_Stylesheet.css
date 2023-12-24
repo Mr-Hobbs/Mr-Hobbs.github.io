@@ -938,6 +938,13 @@ main {
     align-items: center;
 }
 
+.hamburger-button .bar {
+    width: 18px;
+    height: 2px;
+    background-color: var(--bg-white);
+    margin: 2px 0;
+}
+/*
 .hamburger-button .bar1 {
     width: 18px;
     height: 2px;
@@ -958,7 +965,7 @@ main {
     background-color: var(--bg-white);
     margin: 1px 0;
 }
-
+*/
     /*HERO STYLES */
 #gradient-canvas {
     height: 820px;
