@@ -829,6 +829,13 @@ main {
         width: 100%;
         height: auto;
     }
+    .integrations-section .col-left{
+        width: 60%;
+    }
+
+    .integrations-section .col-right{
+        width: 40%;
+    }
 }
 
 /* TABLET SIZE */
@@ -836,37 +843,120 @@ main {
     :root {
         --h1-size: 64px;
         --h1-height: 72px;
-        /*--h2-size:  72px;*/ /*unused*/
-        /*--h2-height: ;*/
         --h3-size: 34px;
-        /*--h4-size: ;
-        --h5-size: ;
-        --h6-size: ;*/
     }
-    .partners-grid { /* adjusting the logos layout */
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-    }
-    .section-container {
-        padding: 0 var(--spacing-md);
-        border: 2px solid red;
+   /*UNIFIED PLATFORM*/
+   .unified-platform-section h2 {
+    width: 100%;
+   }
+   /* INTEGRATIONS SECTION */
+   .integrations-section .card-container {
+        flex-direction: wrap; 
+        margin: var(--spacing-xl);
+   }
+   .integrations-section .card-container .card {
         width: 100%;
+        margin: var(--spacing-md) 0;
     }
+
+    /* WHY SWIPE */
+    .why-swipe-section .card-container {
+        flex-wrap: wrap;
+    }
+    .why-swipe-section .card-container .card {
+        width: 50%;
+        margin: var(--spacing-md) 0;
+    }
+
+    /* GLOBAL SECTION */
+    .global-section .card-container {
+        flex-wrap: wrap;
+    }
+    .global-section .card-container .card {
+        width: 50%;
+    }
+
 }
+
 
 
 /* MOBILE SIZE */
 @media only screen and (max-width: 550px) {
-    body {
-        position: absolute; /*added by Spencer to try and resolve elements not spannig width in Chrom on mobile*/
-        width: 100vw;
+   .two-column{
+    flex-direction: column;
+   }
+
+   .two-column .col-left {
+    width: 100%;
+   }
+
+   .two-column .col-right {
+    width: 100%;
+    padding: 0;
+   }
+
+   .partners-grid {
+    grid-template-columns: 1fr 1fr;
+   }
+
+   /*UNIFIED PLATFORM*/
+   .unified-platform-section h2 {
+    width: 100%;
+   }
+
+   /*INTEGRATIONS SECTION*/
+   .integrations-section .col-right {
+        display: none;
+   } 
+
+   /* WHY SWIPE */
+   .why-swipe-section .card-container .card {
+    width: 100%;
+    }
+
+    .why-swipe-section .card-container .card .icon{
+        height: 40px;
+        }
+
+      /* GLOBAL SECTION */
+    .global-section .card-container .card {
+        width: 100%;
+        margin: var(--spacing-sm);
+    }
+    #globe {
+       opacity: 10%; 
+    }
+
+    /* VIRTUAL EVENTS SECTION */
+    .virtual-events-section .swipe-sessions-card {
+        width: 100%;
+        margin: var(--spacing-lg) 0;
+    }
+    .virtual-events-section .swipe-sessions-card .secondary-text {
+        width: 100%;
+    }
+
+    .virtual-events-section .swipe-sessions-card .card-topv{
+        height: 40%;
+    }
+
+    #sessions-logo {
+        width: 300px;
     }
 }
 
+
+
+html,body {
+   width: 100%; 
+   position: relative;
+   overflow-x: hidden;
+
+}
 /* Spencer MOBILE SIZE */
-@media only screen and (max-width: 375px) {
+/*@media only screen and (max-width: 375px) {
     body {
-        position: absolute; /*added by Spencer to try and resolve elements not spannig width in Chrom on mobile*/
+        position: absolute; 
         width: 100vw;
     }
-}
+}*/
