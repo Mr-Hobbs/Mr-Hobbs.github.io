@@ -201,3 +201,10 @@ body {
         margin-bottom: 0;
     }
   }
+
+html,body {
+   width: 100%; 
+   position: relative;
+   overflow-x: hidden;
+
+}
