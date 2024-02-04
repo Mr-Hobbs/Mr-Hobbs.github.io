@@ -26,7 +26,7 @@
     
 
     <script>
-        fetch("cities.csv")
+        fetch("./cities.csv")
         .then(x => x.text()) // run JS's text method to convert the csv file to text
         .then(y => displayText(y)); // then send it all to displayText
 
