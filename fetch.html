@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="output">
+        <table id="cities">
+            <tr><th>Latitude</th><th>Longitude</th><th>City</th><th>State</th></tr>
+
+
+        </table>
+    </div>
+    
+
+    <script>
+        fetch("G:/Udemy/Udemy Javascript/cities.csv")
+        .then(x => x.text()) // run JS's text method to convert the csv file to text
+        .then(y => displayText(y)); // then send it all to displayText
+
+        let row = 1;
+        displayText = (text) => {
+            let rows = text.split(/\r?\n | \r/);
+            console.log(rows);   // looking at this we see that rows is now an array
+
+                for(let x = 1; x < rows.length-2; x++){ //start at row 1: let x = 1
+                    let row = rows[x].split(',');
+                    //console.log(row);
+                    let lat= row[0] + "&deg; " + row[1] + "' ";
+                    lat += row[2] + row[3];
+                    let long= row[4] + "&deg; " + row[5] + "' ";
+                    long += row[6] + row[7];
+                    //console.log(lat,long);
+                    let city = row[8];
+                    let state = row[9];
+
+                    let tableRow = "<tr>" + "<td>" + lat + "</td><td>" + long + "</td><td>" + city + "</td><td>" + state + "</td></td>";
+                    tableRow = tableRow.replaceAll('"', '');
+
+                    document.getElementById('cities').innerHTML += tableRow;
+                }
+        };
+
+
+
+
+    </script>
+</body>
+</html>
