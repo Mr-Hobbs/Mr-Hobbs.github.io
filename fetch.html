@@ -37,12 +37,16 @@
 
                 for(let x = 1; x < rows.length-2; x++){ //start at row 1: let x = 1
                     let row = rows[x].split(',');
-                    //console.log(row);
+                   
+                    console.log(row);
+                    
                     let lat= row[0] + "&deg; " + row[1] + "' ";
                     lat += row[2] + row[3];
                     let long= row[4] + "&deg; " + row[5] + "' ";
                     long += row[6] + row[7];
-                    //console.log(lat,long);
+                    
+                    console.log(lat,long);
+                    
                     let city = row[8];
                     let state = row[9];
 
