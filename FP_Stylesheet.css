@@ -122,7 +122,7 @@ a {
     text-decoration: none;
     color: var(--purple-1);
     font-weight: 500;
-    transition: color 0.25s ease/*, font-size 2.25s ease;*/
+    transition: color 0.25s ease;/*, font-size 2.25s ease;*/
 }
 
 a:hover {
@@ -282,6 +282,7 @@ p {
     padding: 0 var(--spacing-md); /*16px*/
     margin: 0 0 var(--spacing-xl) 0;
     box-sizing: border-box;
+    z-index: 5;
 }
 
 .menu {
@@ -305,9 +306,17 @@ p {
     background-color: rgba(250, 250, 250, 0.25); /* change background color and add transparency*/
 }
 
+.navbar-button a {
+    color: white;
+}
+
 .navbar-button:hover {
     background-color: rgba(250, 250, 250, 0.5); /* remove some transparency upon hover */
 }
+
+.openDrawer {
+    transform: translateX(-250px); /*animate drawer menu*/
+  }
 
 .hamburger-button {
     display: none;
@@ -317,6 +326,27 @@ p {
     background-color: rgba(107, 99, 247, 0.75);
     color: var(--primary-accent);
 }*/
+
+.mobileNav {
+    width: 125px;
+    background-color: white;
+    height: 335px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    position: fixed;
+    z-index: 4;
+    top: 68px;
+    right: -250px;
+    transition: transform 0.5s;/*animate drawer menu*/
+    border-radius: 20px 0 0 20px;
+}
+
+.mobileNav a {
+    margin: 32px 0 0 0;
+}
+
 
 /* ANMIATED GRADIENT */
 
@@ -936,15 +966,16 @@ main {
     flex-direction: column; /* go from stack of lines to row of lines/bars*/
     justify-content: center;
     align-items: center;
+    z-index: 5;
 }
 
-.hamburger-button .bar {
+/*.hamburger-button .bar {
     width: 18px;
     height: 2px;
     background-color: var(--bg-white);
     margin: 2px 0;
-}
-/*
+}*/
+
 .hamburger-button .bar1 {
     width: 18px;
     height: 2px;
@@ -965,7 +996,7 @@ main {
     background-color: var(--bg-white);
     margin: 1px 0;
 }
-*/
+
     /*HERO STYLES */
 #gradient-canvas {
     height: 820px;
@@ -1241,7 +1272,7 @@ html,body {
       transform: rotate(0);
     }
     to {
-      transform: rotate(45deg) translate(4px, 10px);
+      transform: rotate(45deg) translate(2px, 4px);
     }
   }
   
@@ -1261,6 +1292,6 @@ html,body {
       transform: rotate(0);
     }
     to {
-      transform: rotate(-45deg) translate(4px, -10px);  /* transform origin also can work */
+      transform: rotate(-45deg) translate(2px, -4px);  /* transform origin also can work */
     }
   }
