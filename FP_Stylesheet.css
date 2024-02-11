@@ -329,7 +329,7 @@ p {
 
 .mobileNav {
     width: 125px;
-    background-color: white;
+    background-color: var(--bg-light);
     height: 335px;
     display: flex;
     flex-direction: column;
