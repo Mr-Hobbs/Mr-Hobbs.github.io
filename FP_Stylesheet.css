@@ -949,14 +949,6 @@ main {
     /*NAVBAR STYLES*/
 .navbar {
     margin: var(--spacing-sm) 0 var(--spacing-lg) 0;
-    position: fixed;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin: 0;
-    top: 0;
-    background-color: #7038ff;
-    z-index: 4;
-
 }
 
 .navbar .menu {
@@ -978,7 +970,17 @@ main {
     align-items: center;
     z-index: 5;
 }
+.navbar {
+    position: fixed;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 0;
+    top: 0;
+    background-color: #7038ff;
+    z-index: 4;
+}
 
+    
 /*.hamburger-button .bar {
     width: 18px;
     height: 2px;
