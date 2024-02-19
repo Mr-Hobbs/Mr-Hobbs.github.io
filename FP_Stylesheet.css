@@ -949,6 +949,13 @@ main {
     /*NAVBAR STYLES*/
 .navbar {
     margin: var(--spacing-sm) 0 var(--spacing-lg) 0;
+    position: fixed;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 0;
+    top: 0;
+    background-color: #7038ff;
+    z-index: 4;
 
 }
 
