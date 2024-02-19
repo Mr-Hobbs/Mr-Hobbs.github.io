@@ -1111,10 +1111,8 @@ main {
    }
 
        h1 {
-    position: relative;
-    top:46px;
     padding-top: 10px;
-    margin-top:010px;
+    margin-top: 5px;
    }
        /* PARTNERS GRID */
        .partners-section {
