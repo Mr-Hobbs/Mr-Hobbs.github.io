@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the Zip</title>
+</head>
+<body>
+    <label for="zip">Zip Code:</label>
+    <input type="number" id="zip" />
+    <button id="btnGetInfo">Get Info</button>
+    <div id="info"></div> <!-- This is where the result goes -->
+
+    <script>
+        const btnGetInfo = document.getElementById('btnGetInfo'); /* Referencing the above button in the JS code */
+
+        btnGetInfo.onclick = () => getResponse();
+
+        async function getResponse() {
+            const zip = document.getElementById('zip').value;
+            const zipURL = `http://api.zippopotam.us/US/${zip}`;
+            const response = await fetch(zipURL); /* await can be used because our function is labeled async */
+            const data = await response.json();
+            console.log(data);
+            displayResult(data);
+        }
+
+        displayResult = (data) => {
+            const city = data.places[0]["place name"];
+            const state = data.places[0].state;
+            document.getElementById("info").innerHTML = `<h1>${city}, ${state}<h1>`;
+        }
+
+    </script>
+    
+</body>
+</html>
