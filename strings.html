@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Enter your text</p>
+    <textarea name="" id="userString" cols="30" rows="10"></textarea>
+    <button id="btnString">Process Text</button>
+    <div id="output"></div>
+
+<script>
+    const btnString = document.getElementById('btnString');
+
+    btnString.onclick = (e) => {
+        let out = "";
+        let userString = document.getElementById("userString").value;
+
+        let stringCount = userString.length;
+        out += "<h2>String Information</h2>";
+        out += "Characters: " + stringCount + "<br/>";
+
+        //Position and Unicode
+        out += "<h3>Character Position</h3>";
+        let x = 0;
+        while(x < stringCount) {
+            out += x + ": " + userString.charAt(x) +
+            " Unicode: " + userString.charCodeAt(x)
+            + "<br/>";
+            x++;
+        }
+
+        
+        //Ends With
+        if(userString.endsWith(".")) {
+            out += "<p>It DOES end with .</p>"
+        }else {
+            out += "<p>It does NOT end with .</p>"
+        }
+
+        //Character Position
+        // for future do an if statement if it = -1 then display something else
+        out += "<p>The first 'e' is at position " + 
+        userString.indexOf('e') + ".";
+        out += "<br>The last 'e' is at position " + 
+        userString.lastIndexOf('e') + ".</p>";
+
+        //Character Replacement
+        out += "<p>Replacements Made: <br/>" + userString.replace(/[A-Z]/g, "X");
+        out += "</p>";
+        
+        //Split into an array
+        let family = "Mark Brett Joan Rick Kerry"
+        let fmailyArray = family.split(' ');
+        for(let x = 0; x < fmailyArray.length; x++) {
+            out += fmailyArray[x];
+            out += " ";
+        }
+
+        // Display the generated output
+        document.getElementById('output').innerHTML = out;
+
+    }
+</script>
+
+
+</body>
+</html>
