@@ -99,6 +99,9 @@
             document.onmousemove = handleMouseMove;
             document.onmousedown = handleDown;
             document.onmouseup = handleUp;
+            document.addEventListener('touchmove', handleTouchMove);
+            document.addEventListener('touchstart', handleTouchDown);
+            document.addEventListener('touchend', handleTouchUp);
 
             //Style line
             context.strokeStyle = "#000";
@@ -124,6 +127,17 @@
                 context.moveTo(e.clientX, e.clientY);
             }
         }
+
+///////////////////////////////////////////////////////////
+function handleTouchMove(e)
+        {
+            if(drawing && e.touches.length === 1)
+            {
+                var touch = e.touches[0];
+                drawLine(touch.clientX, touch.clientY);
+            }
+        }
+
 ///////////////////////////////////////////////////////////
         function handleDown(e)
         {
@@ -133,12 +147,34 @@
             context.beginPath();
         }
 ///////////////////////////////////////////////////////////
+function handleTouchDown(e)
+        {
+            drawing = true;
+            if(e.touches.length === 1)
+            {
+                var touch = e.touches[0];
+                drawLine(touch.clientX, touch.clientY);
+            }
+        }
+///////////////////////////////////////////////////////////
         function handleUp()
         {
             drawing = !drawing;
             console.log(drawing);
         }
+///////////////////////////////////////////////////////////
+function handleTouchUp()
+        {
+            drawing = false;
+        }
 
+        function drawLine(x, y)
+        {
+            context.lineTo(x, y);
+            context.stroke();
+            context.beginPath();
+            context.moveTo(x, y);
+        }
     </script>
 
 
